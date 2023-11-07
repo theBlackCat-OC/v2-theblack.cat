@@ -1,3 +1,20 @@
+footer{
+    position: fixed;
+    bottom:0;
+    width: 100%;
+}
 #copyright-text, #sitemap-footer-link{
     display: inline-block;
+}
+
+@media (min-width: 436px) {
+    #sitemap-footer-icon {
+        display: none;
+    }
+}
+
+@media (max-width: 436px) {
+    #sitemap-footer-link {
+        display: none;
+    }
 }

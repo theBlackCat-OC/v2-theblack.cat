@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en-GB">
-<!-- ~~~~ Meta ~~~~ -->
 <head>
+<!-- ~~~~ Meta ~~~~ -->
 <meta charset="utf-8">
 <meta name="color-scheme" content="light, dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -13,6 +13,7 @@
 <!-- ~~~~ Header CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/header/header-buttons.css">
 <link rel="stylesheet" type="text/css" href="styles/header/header-display.css">
+<link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
 <!-- ~~~~ Body CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
 <link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
@@ -31,31 +32,31 @@
 <title>Linkhub. "the Black Cat"</title>
 </head>
 <body>
-<header>
-    <div id="header-wrapper">
-        <div id="header-title" class="user-select-none">
-            <h1 class="sanfrancisco-bold text-black">"the Black Cat"</h1>
-        </div>
-        <div id="header-menu">
+<header class="glassbox-25">
+<div id="header-wrapper" class="">
+    <div id="header-title" class="user-select-none">
+        <h1 class="sanfrancisco-bold text-black">"the Black Cat"</h1>
+    </div>
+    <div id="header-buttons-wrapper">
+        <!--<div id="header-menu-icon">
             <a href="">
                 <img src="resources/images/icons/new-menu.png" width="40" height="40" class="img-inverter">
             </a>
-        </div>
-        <div id="header-buttons-wrapper">
-            <a href="">
-                <div id="header-contact">
-                    <img src="resources/images/icons/contacto.png" width="20" height="20" class="img-inverter">
-                    <span class="sanfrancisco-bold">Contact</span>
-                </div>
-            </a>
-            <a href="">
-                <div id="header-info">
-                    <img src="resources/images/icons/info.png" width="20" height="20" class="img-inverter" alt="Information - by Stockio at Flaticons">
-                    <span class="sanfrancisco-bold">Info</span>
-                </div>
-            </a>
-        </div>
+        </div> -->
+        <a href="">
+            <div id="header-contact">
+                <img src="resources/images/icons/contacto.png" width="20" height="20" class="img-inverter">
+                <span class="sanfrancisco-bold">Contact</span>
+            </div>
+        </a>
+        <a href="">
+            <div id="header-info">
+                <img src="resources/images/icons/info.png" width="20" height="20" class="img-inverter" alt="Information - by Stockio at Flaticons">
+                <span class="sanfrancisco-bold">Info</span>
+            </div>
+        </a>
     </div>
+</div>
 </header>
 <div class="body-cards-wrapper user-select-none">
     <div class="" id="galleries-wrapper">
@@ -97,13 +98,8 @@
         </a>
     </div>
 </div>
-<footer>
-    <a href="" id="copyright-text">
-        <h3 class="user-select-none text-black productsans-bold">&copy; theBlackCat, 2023</h3>
-    </a>
-    <a href="" id="sitemap-footer-link">
-        <h3 class="user-select-none productsans-bold">Site Map</h3>
-    </a>
+<footer class="textalign-center glassbox-10">
+    <h3 class="user-select-none text-black productsans-regular">&copy; theBlackCat, 2023</h3>
 </footer>
 <!-- ~~~~  -->
 <script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>

@@ -1,0 +1,18 @@
+header{
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    z-index: 1;
+}
+
+#header-title, #header-buttons-wrapper{
+    display: inline-block;
+}
+
+#header-contact, #header-info, #header-menu-icon {
+    display: inline-block;
+}
+
+#header-buttons-wrapper{
+    margin-right: 0;
+}

@@ -1,20 +1,5 @@
-#header-wrapper {
-}
-
-#header-title {
-
-}
-
-#header-contact, #header-info, #header-menu {
-
-}
-
-#header-buttons {
-    text-align: right;
-}
-
 @media (min-width: 436px) {
-    #header-menu {
+    #header-menu-icon {
         display: none;
     }
 }
