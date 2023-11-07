@@ -1,11 +1,9 @@
 const imageUrls = [
     'resources/images/bg-images/horizontal/juurikun-horizontal.png',
-    'resources/images/bg-images/horizontal/chaosringen-sketch-horizontal.jpg',
     'resources/images/bg-images/horizontal/chaosringen-color-horizontal.png',
     'resources/images/bg-images/horizontal/korodrawsaug2023-horizontal.jpeg',
     'resources/images/bg-images/horizontal/romupand-aug2023-horizontal.png',
     'resources/images/bg-images/horizontal/mijeh-aug2023-horizontal.jpeg',
-    'resources/images/bg-images/horizontal/ayaben-oct2023-bw.png',
     'resources/images/bg-images/horizontal/ayaben-oct2023-fullcolor.jpeg',
     // Add more image URLs as needed
   ];

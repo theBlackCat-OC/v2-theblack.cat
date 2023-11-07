@@ -85,6 +85,10 @@
     url('https://cdn.theblack.cat/resources/fonts/gilroy-bold.otf') format('opentype');
   }
 
+  @font-face {
+    font-family: 'brightness-inverted';
+    src: url('../../resources/fonts/BrightnessInverted.ttf') format('truetype');
+  }
 
   @font-face {
     font-family: 'FFXIV';
@@ -174,6 +178,12 @@
 .gilroy-bold{
   font-family: 'gilroy-bold', sans-serif;
 }
+
+.brightness-inverted{
+  font-family: 'brightness-inverted', sans-serif;
+}
+
+/**/
 
 .textalign-center{
   text-align: center;
