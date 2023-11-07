@@ -1,0 +1,30 @@
+#header-wrapper {
+    padding: 10px;
+    overflow: hidden; /* Clear the floats */
+}
+
+#header-title {
+    float: left;
+    margin: 0;
+}
+
+#header-contact, #header-info, #header-menu {
+    float: right;
+    margin: 0;
+}
+
+#header-buttons {
+    text-align: right;
+}
+
+@media (min-width: 436px) {
+    #header-menu {
+        display: none;
+    }
+}
+
+@media (max-width: 436px) {
+    #header-contact, #header-info {
+        display: none;
+    }
+}

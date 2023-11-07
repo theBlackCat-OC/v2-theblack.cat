@@ -1,0 +1,9 @@
+#header-buttons-wrapper{
+    margin-top: 3vh;
+    margin-right: 3vw;
+    justify-content: space-around;
+}
+
+#header-info{
+    margin-left: 3vw;
+}

@@ -1,0 +1,23 @@
+.card-wrapper{
+    display: inline-block;
+    width: 39%;
+    height: 25vh;
+    border-radius: 13px;
+}
+
+@media (max-width: 436px) {
+    .card-title{
+        margin-left: 5%;
+    }
+}
+
+@media (max-width: 436px) {
+    .card-wrapper{
+        display: flex-start;
+        flex-direction: column;
+        flex-wrap: wrap;
+        width: 90%;
+        margin-left: 5%;
+        height: 25vh;
+    }
+}

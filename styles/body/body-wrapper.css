@@ -1,0 +1,8 @@
+.body-cards-wrapper{
+    margin-left: 18%;
+}
+@media (max-width: 436px) {
+    .body-cards-wrapper{
+        margin-left: 0;
+    }
+}
