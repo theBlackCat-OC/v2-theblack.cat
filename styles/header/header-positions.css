@@ -1,18 +1,29 @@
-header{
+header {
     position: fixed;
     top: 0;
     width: 100vw;
+    height: 7vh;
     z-index: 1;
+    height: 100px;
 }
 
-#header-title, #header-buttons-wrapper{
+#header-title {
+    position: absolute;
+    left: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header-buttons-wrapper {
+    position: absolute; 
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+#header-contact,
+#header-info,
+#header-menu-icon {
     display: inline-block;
-}
-
-#header-contact, #header-info, #header-menu-icon {
-    display: inline-block;
-}
-
-#header-buttons-wrapper{
-    margin-right: 0;
+    margin-left: 5px;
 }
