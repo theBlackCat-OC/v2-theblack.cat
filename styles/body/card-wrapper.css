@@ -2,17 +2,33 @@
     display: inline-block;
     width: 39%;
     height: 25vh;
-    border-radius: 16px;
-    border: 1px solid black;
+    border-radius: 13px;
     box-sizing: border-box;
-    transition: transform ease 0.3s;
+    transition: border ease 0.5s;
 }
 
 .card-wrapper:hover {
     cursor: pointer;
-    transform: scale(1.05);
-    z-index: 1;
 }
+
+@media (prefers-color-scheme: light) {
+    .card-wrapper {
+        border: 2px solid black;
+    }
+    .card-wrapper:hover {
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
+@media (prefers-color-scheme: dark) {
+    .card-wrapper {
+        border: 2px solid white;
+    }
+    .card-wrapper:hover {
+        border-color: rgba(255, 255, 255, 0.25);
+    }
+}
+
 .card-wrapper-hover {
     cursor: pointer;
     transform: scale(1.05);
@@ -33,5 +49,7 @@
         width: 90%;
         margin-left: 5%;
         height: 25vh;
+        transition: transform ease 0.5s;
+
     }
 }
