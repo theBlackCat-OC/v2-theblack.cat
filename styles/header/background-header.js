@@ -8,7 +8,7 @@ const initialHeaderHeight = header.clientHeight;
 window.addEventListener('scroll', function () {
     const scrollPositionVh = window.scrollY / window.innerHeight * 100;
 
-    if (scrollPositionVh >= 2.1 && !isGlassboxAdded) {
+    if (scrollPositionVh >= 3.5 && !isGlassboxAdded) {
         setTimeout(() => {
             header.classList.add('glassbox-25');
             infoButton.style.transition = 'opacity 0s ease';
@@ -21,7 +21,7 @@ window.addEventListener('scroll', function () {
             }, 500);
         }, 100);
         isGlassboxAdded = true;
-    } else if (scrollPositionVh < 2.1 && isGlassboxAdded) {
+    } else if (scrollPositionVh < 3.5 && isGlassboxAdded) {
         header.classList.remove('glassbox-25');
         infoButton.style.display = '';
         contactButton.style.display = '';
