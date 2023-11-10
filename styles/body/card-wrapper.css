@@ -1,11 +1,16 @@
-.card-wrapper{
+.card-wrapper {
     display: inline-block;
     width: 39%;
     height: 25vh;
-    border-radius: 13px;
+    border-radius: 16px;
+    border: 3px solid transparent; /* Set a transparent border initially */
+    box-sizing: border-box;
+    box-shadow: 0 0 0 1px transparent; /* Use box-shadow to simulate the border */
 }
-.card-wrapper:hover{
+
+.card-wrapper:hover {
     cursor: pointer;
+    border-color: black;
 }
 
 @media (max-width: 436px) {
