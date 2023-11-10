@@ -5,10 +5,13 @@
     border-radius: 13px;
     box-sizing: border-box;
     transition: border ease 0.5s;
+    transition: transform ease 0.3s;
 }
 
-.card-wrapper:hover {
+.card-wrapper:hover{
     cursor: pointer;
+    transform: scale(1.03);
+    z-index: 1;
 }
 
 @media (prefers-color-scheme: light) {
@@ -16,7 +19,7 @@
         border: 2px solid black;
     }
     .card-wrapper:hover {
-        border-color: rgba(255, 255, 255, 0.25);
+        border-color: rgb(24, 124, 255);
     }
 }
 
@@ -25,14 +28,8 @@
         border: 2px solid white;
     }
     .card-wrapper:hover {
-        border-color: rgba(255, 255, 255, 0.25);
+        border-color: rgb(24, 124, 255);
     }
-}
-
-.card-wrapper-hover {
-    cursor: pointer;
-    transform: scale(1.05);
-    z-index: 1;
 }
 
 @media (max-width: 436px) {
