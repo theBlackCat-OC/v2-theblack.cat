@@ -4,6 +4,9 @@
     height: 25vh;
     border-radius: 13px;
 }
+.card-wrapper:hover{
+    cursor: pointer;
+}
 
 @media (max-width: 436px) {
     .card-title{

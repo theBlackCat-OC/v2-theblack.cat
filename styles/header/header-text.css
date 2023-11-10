@@ -1,0 +1,9 @@
+#header-title-text{
+    font-size: 3em;
+}
+
+@media (max-width: 436px) {
+    #header-title-text{
+        font-size: 1.6em;
+    }
+}    

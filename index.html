@@ -14,6 +14,7 @@
 <link rel="stylesheet" type="text/css" href="styles/header/header-buttons.css">
 <link rel="stylesheet" type="text/css" href="styles/header/header-display.css">
 <link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
+<link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
 <!-- ~~~~ Body CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
 <link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
@@ -32,10 +33,10 @@
 <title>Linkhub. "the Black Cat"</title>
 </head>
 <body>
-<header class="">
-<div id="header-wrapper" class="">
+<header id="header">
+<div id="header-wrapper">
     <div id="header-title" class="user-select-none">
-        <h1 class="sanfrancisco-bold text-black margin-left-3vw">"the Black Cat"</h1>
+        <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text">"the Black Cat"</span>
     </div>
     <div id="header-buttons-wrapper">
         <button id="header-contact">
@@ -89,13 +90,17 @@
         </a>
     </div>
 </div>
-<footer class="textalign-center">
+<footer class="textalign-center" id="footer">
     <h3 class="user-select-none text-black productsans-regular">&copy; theBlackCat, 2023</h3>
 </footer>
 <!-- ~~~~  -->
 <script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>
 <script src="scripts/backgrounds/commworks-bg.js"></script>
 <script src="scripts/backgrounds/char-reference-bg.js"></script>
+<!-- ~~~~  -->
+<script src="styles/header/background-header.js"></script>
+<!-- ~~~~  -->
+<script src="styles/footer/footer-display.js"></script>
 <!-- ~~~~  -->
 </body>
 </html>

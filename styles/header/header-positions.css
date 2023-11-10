@@ -2,9 +2,14 @@ header {
     position: fixed;
     top: 0;
     width: 100vw;
-    height: 7vh;
     z-index: 1;
     height: 100px;
+}
+
+@media (max-width: 436px) {
+    header{
+        height: 50px;
+    }
 }
 
 #header-title {
@@ -20,10 +25,14 @@ header {
     top: 50%;
     transform: translateY(-50%);
 }
+@media (min-width: 436px) {
+    #header-buttons-wrapper {
+        right: 100px;
+    }
+}
 
 #header-contact,
-#header-info,
-#header-menu-icon {
+#header-info{
     display: inline-block;
     margin-left: 5px;
 }

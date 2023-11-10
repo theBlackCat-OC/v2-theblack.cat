@@ -37,3 +37,10 @@
 #header-info:not(hover){
     transition: 0.5s ease;
 }
+
+.glassbox-25 #info-button-info,
+.glassbox-25 #contact-button-text {
+    opacity: 0;
+    display: none;
+    transition: opacity 0s ease; 
+}
