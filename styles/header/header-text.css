@@ -1,9 +1,19 @@
 #header-title-text{
     font-size: 3em;
+    transition: color ease 0.3s;
+}
+
+#header-title-text:hover{
+    color:rgb(24, 124, 255);
+    cursor: pointer;
 }
 
 @media (max-width: 436px) {
     #header-title-text{
         font-size: 1.6em;
     }
-}    
+}
+
+.header-title-text-hover{
+    color:rgb(24, 124, 255);
+}

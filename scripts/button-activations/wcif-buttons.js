@@ -2,6 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var bodyCardsWrapper = document.getElementById('body-cards-wrapper');
     var wcifPage = document.getElementById('wcif-page');
     var revertChangesButton = document.getElementById('wcif-revert');
+    var headerTitleText = document.getElementById('header-title-text');
 
     document.getElementById('wcif-card').addEventListener('click', function () {
         if (bodyCardsWrapper.style.display !== 'none') {
@@ -17,6 +18,13 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     document.getElementById('wcif-revert').addEventListener('click', function () {
+        bodyCardsWrapper.style.display = '';
+        wcifPage.style.display = 'none';
+        revertChangesButton.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    });
+    
+    headerTitleText.addEventListener('click', function () {
         bodyCardsWrapper.style.display = '';
         wcifPage.style.display = 'none';
         revertChangesButton.style.display = 'none';

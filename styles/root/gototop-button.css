@@ -13,7 +13,7 @@
     vertical-align: -4px;
 }
 
-@media (max-width: 800px) {
+@media (max-width: 436px) {
     .floating-gototop-button{
         top: 0;
         right:-2px;
@@ -23,7 +23,7 @@
 
 
     .floating-gototop-icon{
-        width: 36px;
+        width: 46px;
         height: auto;
         vertical-align: -4px;
     }
