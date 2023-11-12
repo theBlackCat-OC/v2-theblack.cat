@@ -8,10 +8,10 @@ const imageUrls = [
   function getRandomImage() {
     return imageUrls[Math.floor(Math.random() * imageUrls.length)];
   }
-  function setRandomBackground() {
+  function setRandomCommWorksBackground() {
     const randomImage = getRandomImage();
     const imageContainer = document.getElementById('oc-commworks');
     imageContainer.style.backgroundImage = `url('${randomImage}')`;
   }
   
-  setRandomBackground();
+  setRandomCommWorksBackground();

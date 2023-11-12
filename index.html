@@ -7,6 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <!-- ~~~~ Root CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/root/root.css">
+<link rel="stylesheet" type="text/css" href="styles/root/loading-animations.css">
 <link rel="stylesheet" type="text/css" href="styles/root/gototop-button.css">
 <link rel="stylesheet" type="text/css" href="styles/root/fonts.css">
 <link rel="stylesheet" type="text/css" href="styles/root/glassbox.css">
@@ -56,41 +57,47 @@
 </header>
 <!-- ~~~~ Cards ~~~~ -->
 <div class="body-cards-wrapper user-select-none" id="body-cards-wrapper">
-    <div class="" id="galleries-wrapper">
+    <div class="loading-animation" id="galleries-wrapper">
         <div class="card-title">
             <h2 class="sanfrancisco-regular text-black">Galleries</h2>
         </div>
-            <button class="card-wrapper" id="oc-commworks">
-                <div class="glassbox-25">
-                    <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Comissioned Works</h2>
+            <a href="https://theblack.cat/commissioned-works" target="_blank">
+                <div class="card-wrapper" id="oc-commworks">
+                    <div class="glassbox-25">
+                        <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Comissioned Works</h2>
+                    </div>
                 </div>
-            </button>
-            <button class="card-wrapper margin-top-2vh" id="oc-body-references">
-                <div class="glassbox-25">
-                    <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Character References</h2>
+            </a>
+            <a href="https://reference.theblack.cat/" target="_blank">
+                <div class="card-wrapper margin-top-2vh" id="oc-body-references">
+                    <div class="glassbox-25">
+                        <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Character References</h2>
+                    </div>
                 </div>
-            </button>
+            </a>
     </div>
-    <div class="margin-top-2vh" id="oc-wrapper">
+    <div class="margin-top-2vh loading-animation" id="oc-wrapper">
         <div class="card-title">
             <h2 class="sanfrancisco-regular text-black">Original Character</h2>
         </div>
-            <button class="card-wrapper" id="tou-card">
-                <div class="glassbox-25">
-                    <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Terms of Use</h2>
+            <a href="#">
+                <div class="card-wrapper" id="tou-card">
+                    <div class="glassbox-25">
+                        <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Terms of Use</h2>
+                    </div>
                 </div>
-            </button>
-        </a>
-            <button class="card-wrapper margin-top-2vh margin-bottom-5vh" id="wcif-card">
-                <div class="glassbox-25">
-                    <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">FFXIV&copy; WCIF</h2>
+            </a>
+            <a href="#">
+                <div class="card-wrapper margin-top-2vh margin-bottom-5vh" id="wcif-card">
+                    <div class="glassbox-25">
+                        <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">FFXIV&copy; WCIF</h2>
+                    </div>
                 </div>
-            </button>
-        </a>
+            </a>
     </div>
 </div>
 <!-- ~~~~ WCIF ~~~~ -->
-<div class="glassbox-50 padding-threevw border-radius-16px margin-bottom-2vh margin-left-22-5vw margin-right-22-5vw padding-threevw text-black" id="wcif-page" style="display: none;">
+<div class="glassbox-50 padding-threevw border-radius-16px margin-bottom-2vh margin-left-22-5vw margin-right-22-5vw padding-threevw text-black loading-animation" id="wcif-page" style="display: none;">
     <span class="latex-regular pointeight-em">Remember to follow the <a href="tou">Original Character Terms of Use</a>.</span><br><br>
         <span class="productsans-regular two-em underline"><img src="resources/images/icons/hair.png" width="28" height="28" class="vertical-align-0dot2vh img-inverter" title="Thank you Flaticons!">&nbsp;Hairstyles</span><br>
         <span class="productsans-regular onepointfive-em">&nbsp;● Imeris: <a href="https://www.xivmodarchive.com/modid/87668  " target="_blank">Ebyssia&nbsp;<img src="resources/images/icons/new-window.png " width="12" height="12" class="vertical-align-minus0dot4vh img-inverter" title="Thank you Flaticons!"></a></span><br>
@@ -168,7 +175,7 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
     <span class="sanfrancisco-bold text-black">Back</span>
 </div>
 <!-- ~~~~ ToU ~~~~ -->
-<div class="glassbox-50 border-radius-16px text-black" id="tou-page" style="display: none;">
+<div class="glassbox-50 border-radius-16px text-black loading-animation" id="tou-page" style="display: none;">
     <span class="productsans-regular onepointfive-em">TL;DR: You are free to use and/or copy <span class="latex-regular">"the Black Cat"</span> Original Character as long as she is not depicted in any artwork with either:
         <br>
         <b>&nbsp;●&nbsp;Gore</b><br>
@@ -239,7 +246,6 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 </div>
 <!-- ~~~~ Footer ~~~~ -->
 <footer class="textalign-center" id="footer">
-    <h2 class="user-select-none text-black sanfrancisco-regular">&copy; theBlackCat, 2023</h2>
 </footer>
 <!-- ~~~~  -->
 <script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>
@@ -253,14 +259,12 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 <!-- ~~~~  -->
 <script src="styles/header/background-header.js"></script>
 <!-- ~~~~  -->
-<script src="styles/footer/footer-display.js"></script>
-<!-- ~~~~  -->
-<script src="scripts/button-activations/cards-buttons.js"></script>
+<!-- ~~~~ -->
 <script src="scripts/button-activations/tou-buttons.js"></script>
 <script src="scripts/button-activations/wcif-buttons.js"></script>
-<!-- ~~~~  -->
 <!-- ~~~~ Fediverse Verification ~~~~ -->
 <a rel="me" href="https://aethy.com/@di_theblackcat"></a>
 <a rel="me" href="https://misskey.io/@theblackcat"></a>
+<!-- ~~~~  -->
 </body>
 </html>

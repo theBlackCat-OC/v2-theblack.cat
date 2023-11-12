@@ -7,10 +7,10 @@ function getrandomBodyRefBGImage() {
     return imagesBodyRefBG[Math.floor(Math.random() * imagesBodyRefBG.length)];
 }
 
-function setRandomBackground() {
+function setRandomBodyRefBG() {
     const randomBodyRefBGImage = getrandomBodyRefBGImage();
     const bodyrefContainer = document.getElementById('oc-body-references');
     bodyrefContainer.style.backgroundImage = `url('${randomBodyRefBGImage}')`;
 }
 
-setRandomBackground();
+setRandomBodyRefBG();
