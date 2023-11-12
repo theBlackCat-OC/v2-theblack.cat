@@ -1,6 +1,6 @@
 #tou-page{
     padding: 3vw;
-    margin-top: 7%;
+    margin-top: 4%;
     margin-left:22.5vw;
     margin-right:22.5vw;
     padding:3vw;
@@ -35,6 +35,7 @@
 
 @media (max-width: 436px) {
     #tou-page{
+        margin-top: 7%;
         padding: 3px;
         margin-bottom:4vh;
         width: 90%;

@@ -221,51 +221,41 @@
   user-select: none;
 }
 
+/**/
+
+html{
+  font-size:15px;
+}
+
 .pointseven-em{
-  font-size: 0.7em;
+  font-size: 0.7rem;
 }
 
 .pointeight-em{
-  font-size: 0.8em;
+  font-size: 0.8rem;
 }
 
 
 .pointnine-em{
-  font-size: 0.9em;
+  font-size: 0.9rem;
 }
 
 .one-em{
-  font-size: 1em;
+  font-size: 1rem;
 }
 
 .onepointfive-em{
-  font-size: 1.5em;
+  font-size: 1.618rem;
 }
 
 .two-em{
-  font-size: 2em;
-}
-
-.twopointfive-em{
-  font-size: 2.5em;
+  font-size: 2.236rem;
 }
 
 .three-em{
-  font-size: 3em;
+  font-size: 2.854rem;
 }
 
-.three-em-header{
-  font-size: 3em;
-}
-
-.hidden-and-nowrap{
-  white-space: nowrap;
-  overflow: hidden;
-}
-
-.overflow-normal{
-  overflow: normal;
-}
 
 a {
   text-decoration: none;
