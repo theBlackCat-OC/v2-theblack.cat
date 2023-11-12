@@ -8,7 +8,7 @@
             console.error('Failed to copy email: ', err);
           });
   
-        document.getElementById('emailImage').src = "https://cdn.theblack.cat/resources/thank-you-flaticons/check.png";
+        document.getElementById('emailImage').src = "../../resources/icons/check.png";
         setTimeout(function() {
           document.getElementById('emailImage').src = "https://cdn.theblack.cat/resources/thank-you-flaticons/copy.png";
         }, 2500);
@@ -25,7 +25,7 @@
             console.error('Failed to copy text: ', err);
           });
   
-        document.getElementById('discordImage').src = "https://cdn.theblack.cat/resources/thank-you-flaticons/check.png";
+        document.getElementById('discordImage').src = "../../resources/icons/check.png";
         setTimeout(function() {
           document.getElementById('discordImage').src = "https://cdn.theblack.cat/resources/thank-you-flaticons/copy.png";
         }, 2500);

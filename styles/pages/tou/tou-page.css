@@ -33,7 +33,7 @@
     height: 30px;
 }
 
-@media (max-width: 436px) {
+@media (max-width: 819px) {
     #tou-page{
         margin-top: 7%;
         padding: 3px;

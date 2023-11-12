@@ -1,16 +1,38 @@
 document.addEventListener('DOMContentLoaded', () => {
-    const copyButton = document.querySelector('.copy-button');
-    const codeSnippet = document.querySelector('code');
+    const copyRegularCPlusButton = document.querySelector('.copy-button-cplus-regular');
+    const codeCPlusRegular = document.querySelector('.code-cplus-regular');
   
-    copyButton.addEventListener('click', () => {
-      const codeText = codeSnippet.textContent;
+    copyRegularCPlusButton.addEventListener('click', () => {
+      const codeText = codeCPlusRegular.textContent;
   
       navigator.clipboard.writeText(codeText)
         .then(() => {
           console.log('Code copied to clipboard');
-          copyButton.innerHTML = '<img src="https://cdn.theblack.cat/resources/thank-you-flaticons/check.png" width="19" height="19" class="inline-icon img-inverter">';
+          copyRegularCPlusButton.innerHTML = '<img src="../../resources/images/icons/check.png" width="19" height="19" class="inline-icon img-inverter">';
           setTimeout(() => {
-            copyButton.innerHTML = '<img src="https://cdn.theblack.cat/resources/thank-you-flaticons/copy.png" width="19" height="19" class="inline-icon img-inverter">';
+            copyRegularCPlusButton.innerHTML = '<img src="../../resources/images/icons/copy.png" width="19" height="19" class="inline-icon img-inverter">';
+          }, 3000);
+        })
+        .catch((err) => {
+          console.error('Failed to copy code: ', err);
+        });
+    });
+  });
+
+
+  document.addEventListener('DOMContentLoaded', () => {
+    const copyEXQBCPlusButton = document.querySelector('.copy-button-cplus-exqb');
+    const codeEXQBCPlus = document.querySelector('.code-cplus-exqb');
+  
+    copyEXQBCPlusButton.addEventListener('click', () => {
+      const codeText = codeEXQBCPlus.textContent;
+  
+      navigator.clipboard.writeText(codeText)
+        .then(() => {
+          console.log('Code copied to clipboard');
+          copyEXQBCPlusButton.innerHTML = '<img src="../../resources/images/icons/check.png" width="19" height="19" class="inline-icon img-inverter">';
+          setTimeout(() => {
+            copyEXQBCPlusButton.innerHTML = '<img src="../../resources/images/icons/copy.png" width="19" height="19" class="inline-icon img-inverter">';
           }, 3000);
         })
         .catch((err) => {

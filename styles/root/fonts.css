@@ -227,42 +227,21 @@ html{
   font-size:15px;
 }
 
-.pointseven-em{
-  font-size: 0.7rem;
-}
-
-.pointeight-em{
-  font-size: 0.8rem;
-}
-
-
-.pointnine-em{
-  font-size: 0.9rem;
-}
-
 .one-em{
-  font-size: 1rem;
+  font-size: clamp(1rem, 1.618vw, 1.618rem);
 }
 
 .onepointfive-em{
-  font-size: 1.618rem;
+  font-size: clamp(1.618rem, 2.638vw, 2.638rem);
 }
 
 .two-em{
-  font-size: 2.236rem;
-}
-
-.three-em{
-  font-size: 2.854rem;
-}
+  font-size: clamp(2.236rem, 2.854vw, 2.854rem);
+}xxxx
 
 
 a {
   text-decoration: none;
-}
-
-.no-underline a:hover{
-  text-decoration: none !important;
 }
 
 @media (prefers-color-scheme: light) {
@@ -286,7 +265,7 @@ a {
       color: rgb(24, 124, 255);
   }
   a:hover, .a:active {
-      color: rgb(24, 124, 255);
+      color: #18F0FF;
       text-decoration: underline;
   }
   
