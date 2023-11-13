@@ -61,23 +61,6 @@
     transition: transform ease 0.3s;
     height: auto;
 }
-
-@media (max-width: 436px) {
-    .contact-button-wrapper{
-        margin-left: 0;
-    }
-    .contact-button{
-        padding: 3px;
-        width: 80vw;
-        margin-left: 10%;
-    }
-
-    .contact-button-icon{
-        width: 2rem;
-        height: 2rem;
-    }
-}
-
 .contact-button:hover{
     transform: scale(1.03);
 }
