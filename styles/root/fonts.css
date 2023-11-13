@@ -237,11 +237,12 @@ html{
 
 .two-em{
   font-size: clamp(2.236rem, 2.854vw, 2.854rem);
-}xxxx
+}
 
 
 a {
   text-decoration: none;
+  transition: color ease 0.3s;
 }
 
 @media (prefers-color-scheme: light) {
@@ -266,7 +267,6 @@ a {
   }
   a:hover, .a:active {
       color: #18F0FF;
-      text-decoration: underline;
   }
   
   }
