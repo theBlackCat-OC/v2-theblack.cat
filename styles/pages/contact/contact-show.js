@@ -4,6 +4,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showContactPage() {
         contactPageWrapper.style.display = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     headerContact.addEventListener('click', showContactPage);
