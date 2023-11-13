@@ -1,6 +1,6 @@
 const imagesBodyRefBG = [
-    'resources/images/bg-images/vertical/korodraws-bodyref-bg.avif',
-    'resources/images/bg-images/vertical/romupand-bodyref-bg.avif',
+    'resources/images/bg-images/horizontal/korodraws-bodyref-bg.avif',
+    'resources/images/bg-images/horizontal/romupand-bodyref-bg.avif',
 ];
 
 function getrandomBodyRefBGImage() {

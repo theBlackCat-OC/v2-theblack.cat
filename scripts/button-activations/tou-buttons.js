@@ -5,11 +5,17 @@ document.addEventListener('DOMContentLoaded', function () {
     var headerTitleText = document.getElementById('header-title-text');
 
     function vibrate() {
-        // Check if the Vibration API is supported
         if ('vibrate' in navigator) {
-            // Vibrate for 100 milliseconds
             navigator.vibrate(100);
         }
+    }
+
+    function handleRevertAction() {
+        vibrate(); // Add vibration effect
+        bodyCardsWrapper.style.display = '';
+        touPage.style.display = 'none';
+        revertChangesButton.style.display = 'none';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     document.getElementById('tou-card').addEventListener('click', function () {
@@ -19,27 +25,24 @@ document.addEventListener('DOMContentLoaded', function () {
             touPage.style.display = '';
             revertChangesButton.style.display = '';
         } else {
-            bodyCardsWrapper.style.display = '';
-            touPage.style.display = 'none';
-            revertChangesButton.style.display = 'none';
+            handleRevertAction();
         }
         window.scrollTo({ top: 0, behavior: 'smooth' });
     });
 
     document.getElementById('tou-revert').addEventListener('click', function () {
-        vibrate(); // Add vibration effect
-        bodyCardsWrapper.style.display = '';
-        touPage.style.display = 'none';
-        revertChangesButton.style.display = 'none';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        handleRevertAction();
     });
 
     headerTitleText.addEventListener('click', function () {
-        vibrate(); // Add vibration effect
-        bodyCardsWrapper.style.display = '';
-        touPage.style.display = 'none';
-        revertChangesButton.style.display = 'none';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+        handleRevertAction();
+    });
+
+    // Add event listener for the 'Esc' key
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            handleRevertAction();
+        }
     });
 });
 
