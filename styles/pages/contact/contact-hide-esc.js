@@ -10,4 +10,5 @@ document.addEventListener('DOMContentLoaded', function () {
             hideContactPage();
         }
     });
+    contactPageWrapper.addEventListener('click', hideContactPage);
 });
