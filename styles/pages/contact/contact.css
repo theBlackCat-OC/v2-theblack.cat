@@ -1,8 +1,9 @@
 .contact-page-wrapper{
     width: 100%;
     height: 100vh;
-    position: absolute;
+    position: sticky;
     inset: 0;
+    overflow-x: auto;
 }
 .contact-button-wrapper{
     margin-top: 5%;

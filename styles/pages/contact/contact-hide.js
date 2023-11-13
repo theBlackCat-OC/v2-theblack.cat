@@ -1,16 +1,13 @@
-    document.addEventListener('DOMContentLoaded', function () {
-        var contactButtonClose = document.getElementById('contact-button-close');
-        var contactPageWrapper = document.getElementById('contact-page-wrapper');
+document.addEventListener('DOMContentLoaded', function () {
+    var contactPageWrapper = document.getElementById('contact-page-wrapper');
 
-        function hideContactPage() {
-            contactPageWrapper.style.display = 'none';
+    function hideContactPage() {
+        contactPageWrapper.style.display = 'none';
+    }
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            hideContactPage();
         }
-
-        contactButtonClose.addEventListener('click', hideContactPage);
-
-        document.addEventListener('keydown', function (event) {
-            if (event.key === 'Escape') {
-                hideContactPage();
-            }
-        });
     });
+});

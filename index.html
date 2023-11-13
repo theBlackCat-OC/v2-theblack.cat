@@ -59,7 +59,7 @@
 <!-- ~~~~ Contact ~~~~ -->
 <div class="contact-page-wrapper" id="contact-page-wrapper" style="display: none;">
     <div class="contact-button-wrapper loading-animation" id="contact-button-wrapper">
-        <div class="contact-button cursor-pointer">
+        <div class="contact-button" onclick="document.getElementById('email-container').style.display = '';">
             <img src="resources/images/icons/icons8-email-96.png" class="contact-button-icon display-inlineblock">
             <h2 class="text-black productsans-bold two-em display-inlineblock">Email</h2>
             <div class="margin-bottom-2vh loading-animation-longer" id="email-container" style="display: none;">
@@ -78,11 +78,11 @@
                 <img src="resources/images/icons/new-window.png" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you Flaticons!">
             </div>
         </a>
-        <div class="contact-button cursor-pointer" id="discord-card">
+        <div class="contact-button" id="discord-card" onclick="document.getElementById('discord-container').style.display = '';">
             <img src="resources/images/icons/discord-black.svg" class="contact-button-icon img-inverter display-inlineblock">
             <h2 class="text-black unisans-heavy two-em display-inlineblock">DISCORD</h2>
             <div class="margin-bottom-2vh loading-animation-longer" id="discord-container" style="display: none;">
-                <span class="display-inlineblock text-black latex-regular one-em" id="dc-handler">
+                <span class="display-inlineblock text-black latex-regular one-em" id="dc-handler" style="user-select: all;">
                     di_theblackcat
                 </span>
                 <img src="resources/images/icons/copy.png" width="20" height="20" class="display-inlineblock img-inverter cursor-pointer" id="dc-copy-icon">
@@ -109,7 +109,7 @@
                 <img src="resources/images/icons/new-window.png" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you Flaticons!">
             </div>
         </a>
-        <div class="contact-button-close textalign-center">
+        <div class="contact-button-close textalign-center" onclick="document.getElementById('contact-page-wrapper').style.display = 'none';">
             <img src="resources/images/icons/cancel.png" class="contact-button-icon img-inverter display-inlineblock">
             <span class="one-em text-black sanfrancisco-bold display-inlineblock">
                 Close
@@ -321,11 +321,59 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 <footer class="textalign-center" id="footer">
 </footer>
 <!-- ~~~~  -->
+<script>
+    document.addEventListener('DOMContentLoaded', function() {
+  function copyEmailToClipboard() {
+    var email = document.getElementById('email-addr').getAttribute('href').replace('mailto:', '');
+    navigator.clipboard.writeText(email)
+      .then(function() {
+        console.log('Email copied to clipboard');
+      })
+      .catch(function(err) {
+        console.error('Failed to copy email: ', err);
+      });
+
+    document.getElementById('email-copy-icon').src = "resources/images/icons/check.png";
+    setTimeout(function() {
+      document.getElementById('email-copy-icon').src = "resources/images/icons/copy.png";
+    }, 2500);
+  }
+
+  // Function to handle text copying
+  function copyTextToClipboard() {
+    var dcHandletoCopy = "di_theblackcat";
+    navigator.clipboard.writeText(dcHandletoCopy)
+      .then(function() {
+        console.log('Text copied to clipboard');
+      })
+      .catch(function(err) {
+        console.error('Failed to copy text: ', err);
+      });
+
+    document.getElementById('dc-copy-icon').src = "resources/images/icons/check.png";
+    setTimeout(function() {
+      document.getElementById('dc-copy-icon').src = "resources/images/icons/copy.png";
+    }, 2500);
+  }
+
+  document.getElementById('email-copy-icon').addEventListener('click', function() {
+    copyEmailToClipboard();
+  });
+
+  document.getElementById('dc-copy-icon').addEventListener('click', function() {
+    copyTextToClipboard();
+  });
+
+  // Adding the "img-inverter" class to the elements
+  document.getElementById('email-copy-icon').classList.add('img-inverter');
+  document.getElementById('dc-copy-icon').classList.add('img-inverter');
+});
+</script>
 <script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>
 <script src="scripts/goToTop/goToTop.js"></script>
 <!-- ~~~~  -->
 <script src="styles/pages/contact/contact-show.js"></script> 
-
+<script src="styles/pages/contact/contact-hide.js"></script> 
 <!-- ~~~~  -->
 <script src="styles/body/gallery-cards/bodyref-card-bg.js"></script>
 <script src="styles/body/gallery-cards/commworks-bg.js"></script>
