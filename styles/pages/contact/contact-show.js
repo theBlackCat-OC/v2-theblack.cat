@@ -3,7 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var contactPageWrapper = document.getElementById('contact-page-wrapper');
 
     function showContactPage() {
-        contactPageWrapper.style.visibility = '';
+        contactPageWrapper.style.display = '';
     }
 
     headerContact.addEventListener('click', showContactPage);
