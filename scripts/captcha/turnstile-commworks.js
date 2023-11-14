@@ -13,7 +13,7 @@ if (window.matchMedia) {
   const theme = prefersDarkMode ? 'dark' : 'light';
 
   window.onloadTurnstileCallback = function() {
-    turnstile.render('#turnstile-widget-commworks', {
+    turnstile.render('#turnstile-widget', {
       ...turnstileConfig,
       theme: theme,
     });
@@ -31,6 +31,6 @@ if (window.matchMedia) {
 }
 
 function hideCaptchaAndShowContent() {
-  document.querySelector(".hiddenby-turnstile-commworks").style.display = "";
-  document.querySelector(".turnstile-widget-commworks").style.display = "none";
+  document.querySelector(".hiddenby-turnstile").style.display = "";
+  document.querySelector(".turnstile-widget").style.display = "none";
 }
