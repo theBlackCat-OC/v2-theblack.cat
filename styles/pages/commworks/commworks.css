@@ -1,3 +1,14 @@
+@media (min-width: 436px) {
+  #header-title-text-mobile{
+      display: none;
+  }
+}
+@media (max-width: 436px) {
+  #header-title-text{
+      display: none;
+  }
+} 
+
 .gallery-container {
     margin-left: 15%;
     margin-right: 15%;
@@ -12,7 +23,7 @@
     line-height: 1.6;
     font-family: 'productsans-light', sans-serif;
     border-radius: 13px;
-    overflow: auto;
+
 }
 
 .center-box-container {
@@ -45,7 +56,8 @@
 @media (max-width: 1244px) {
     .gallery-container {
         width: 71vw;
-        margin: auto;
+        margin-top: 10%;
+        margin-left: 5%;
         background: rgba(255, 255, 255, 0.25);
         box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
         backdrop-filter: blur(3.1px);
@@ -97,6 +109,7 @@
 
 
 .gallery {
+    margin-top: 2vh;
     display: none;
     flex-wrap: wrap;
     gap: 16px;
@@ -243,7 +256,7 @@
 .bubble-trigger-gallery {
   position: fixed;
   top: 0.4vh;
-  left: 0.6vw;
+  right: 0.6vw;
   padding: 10px;
   background: rgba(255, 255, 255, 0.25);
   box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
@@ -257,7 +270,7 @@
   .bubble-gallery {
     position: fixed;
     top: 1.2vh;
-    left: 1.2vw;
+    right: 1.2vw;
     display: none;
     padding: 10px;
     background: rgba(255, 255, 255, 0.6);
@@ -349,4 +362,67 @@
   color: white;
   font-size: 30px;
   cursor: pointer;
+}
+
+.bubble {
+  position: fixed;
+  top: 1.2vh;
+  right: 1.2vw;
+  display: none;
+  padding: 10px;
+  z-index: 4;
+  border-radius: 15px;
+  font-family: 'productsanslight', 'sans-serif';
+  border: 1px solid rgb(255, 255, 255);
+  user-select: none;
+}
+
+.bubble-trigger {
+  position: fixed;
+  top: 0.4vh;
+  right: 0.6vw;
+  padding: 10px;
+  z-index: 3;
+  border: 1px solid rgb(255, 255, 255);
+  border-radius: 16px;
+  user-select: none;
+}
+
+  .bubble-trigger:hover + .bubble,
+.bubble:hover {
+  display: block;
+}
+
+@media (prefers-color-scheme: light) {
+  .bubble-trigger {
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+  }
+
+  .bubble {
+    background: rgba(255, 255, 255, 0.6);
+    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(3.1px);
+    -webkit-backdrop-filter: blur(3.1px);
+  }
+}
+
+@media (prefers-color-scheme: dark) {
+  .bubble-trigger {
+    background: rgba(0, 0, 0, 0.25);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(4.9px);
+    -webkit-backdrop-filter: blur(4.9px);
+    border: 1px solid rgba(255, 255, 255, 0.5)
+  }
+
+  .bubble {
+    background: rgba(0, 0, 0, 0.6);
+    box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgb(255, 255, 255);
+  }
 }

@@ -52,8 +52,9 @@
 <!--  ~~~~ Header ~~~~ -->
 <header id="header">
 <div id="header-wrapper">
-    <div id="header-title" class="user-select-none">
-        <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text">&quot;the Black Cat&quot;</span>
+    <div id="header-title" class="user-select-none" text="Back to home">
+        <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text">&quot;the Black Cat&quot; - Commissioned Works</span>
+        <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text-mobile">&quot;tBC&quot; - Commissioned Works</span>
     </div>
     <div id="header-buttons-wrapper">
         <button id="header-contact">
@@ -74,14 +75,7 @@
         <span class="sanfrancisco-bold" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span>
         <span class="sanfrancisco-bold"> here to dismiss.</span>
     </div>
-    <div class="turnstile-widget glassbox-10">
-        <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
-        <br><br>
-        <br><br>
-        <div id="turnstile-widget" class="turnstile-widget"></div>
-        <br>
-    </div>
-    <div class="contact-button-wrapper loading-animation hiddenby-turnstile" id="contact-button-wrapper" style="display: none;">
+    <div class="contact-button-wrapper loading-animation hiddenby-turnstile" id="contact-button-wrapper">
         <div class="contact-button cursor-pointer" id="email-card" onclick="document.getElementById('email-container').style.display = ''; document.getElementById('email-card').style.cursor = 'auto';">
             <img src="resources/images/icons/email.svg" class="contact-button-icon display-inlineblock">
             <h2 class="text-black productsans-bold two-em display-inlineblock">Email</h2>
@@ -232,21 +226,35 @@
 </div>
 </header>
 <!-- ~~~~ Commissioned Works Gallery ~~~~ -->
-<br><br><br><br><br><br><br><br> <!-- the jank lmaoo-->
-<div class="turnstile-widget glassbox-10">
+<div class="turnstile-widget-wrapper-commworks glassbox-10">
     <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
     <br><br>
     <br><br>
-    <div id="turnstile-widget" class="turnstile-widget"></div>
+    <div id="turnstile-widget-commworks" class="turnstile-widget"></div>
     <br>
 </div>
-<div class="gallery-container hiddenby-turnstile" style="display: none;">
+<br>
+<div class="gallery-container hiddenby-turnstile margin-top-10vh">
+    <!-- Tip Bubble -->
+    <div class="bubble-trigger-gallery cursor-help user-select-none">
+        <img src="https://cdn.theblack.cat/resources/thank-you-flaticons/tip.png" width="28" height="28">
+    </div>
+    <div class="bubble-gallery user-select-none cursor-help text-black">
+        <ul>
+            <li><span class="productsans-regular">Click on any <span class="productsans-bold">tag</span> to browse the gallery. Tags are exclusive from each other.</span></li>
+            <li><span class="productsans-regular">Click on the image on the card to zoom it. Click on the X or away to dismiss.</span></li>
+            <li><span class="productsans-bold">Portraiture</span> <span class="productsans-regular"> tags are always SFW.</span></li>
+            <li><span class="productsans-regular">The <span class="productsans-bold">Degen</span> tag is a standalone tag that includes all NSFW works that are not exclusively vanilla.</span>&nbsp;<span class="latex-regular">Content Warning Beware!</span></li>
+        </ul>
+    </div>
+    <!-- ~~~~ Gallery ~~~~ -->
         <div class="tag-container-parent">
-            <div class="tag-container" id="tagContainer"></div>
+                <div class="tag-container" id="tagContainer"></div>
         </div>
-        <div class="gallery" id="gallery"></div>  
-</div>
-<div id="imageModal" class="modal">
+        <div class="gallery" id="gallery">
+        </div>  
+    </div>
+    <div id="imageModal" class="modal">
         <span class="close">&times;</span>
         <img class="modal-content" id="zoomedImage">
 </div>
@@ -259,19 +267,15 @@
 <!--  ~~~~ Footer ~~~~ -->
 <footer class="textalign-center">
 </footer>
-<!--  ~~~~ Tip Bubble ~~~~  -->
-<div class="bubble-trigger-gallery cursor-help user-select-none">
-            <img src="https://cdn.theblack.cat/resources/thank-you-flaticons/tip.png" width="28" height="28">
-</div>
-<div class="bubble-gallery user-select-none cursor-help text-black">
-          ●&nbsp;<span class="productsans-regular">Click on any <span class="productsans-bold">tag</span> to browse the gallery. Tags are exclusive from each other.</span>
-          <br>●&nbsp;<span class="productsans-regular">Click on the image on the card to zoom it. Click on the X or away to dismiss.</span>
-          <br>●&nbsp;<span class="productsans-bold">Portraiture</span> <span class="productsans-regular"> tags are always SFW.</span>
-          <br>●&nbsp;<span class="productsans-regular">The <span class="productsans-bold">Degen</span> tag is a standalone tag that includes all NSFW works that are not exclusively vanilla.</span>&nbsp;<span class="latex-regular">Content Warning Beware!</span>
-</div>
 <!--  ~~~~ Scripts ~~~~  -->
 <script src="styles/pages/commworks/commworks-engine.js"></script>
 <script src="styles/pages/commworks/commworks-gallery.js"></script>
+<script src="styles/pages/commworks/bubble-tip.js"></script>
+<!--  ~~~~  -->
+<!--  ~~~~  -->
+<script src="styles/pages/contact/contact-show.js"></script>
+<script src="styles/pages/info/info-show.js"></script>
+<script src="styles/pages/info/info-hide.js"></script>
 <!--  ~~~~  -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
 <script src="scripts/captcha/turnstile-commworks.js"></script>
@@ -280,23 +284,11 @@
 <script src="scripts/goToTop/goToTop.js"></script>
 <script src="scripts/root/link-parser.js"></script>
 <!--  ~~~~  -->
-<script src="styles/pages/contact/contact-show.js"></script>
-<script src="styles/pages/info/info-show.js"></script>
-<script src="styles/pages/info/info-hide.js"></script>
-<!--  ~~~~  -->
-<script src="styles/body/gallery-cards/bodyref-card-bg.js"></script>
-<script src="styles/body/gallery-cards/commworks-bg.js"></script>
-<script src="styles/body/oc-cards/wcif-card-bg.js"></script>
-<script src="styles/body/oc-cards/tou-card-bg.js"></script>
-<script src="styles/body/card-tap-detection.js"></script>
-<!--  ~~~~  -->
 <script src="styles/header/background-header.js"></script>
 <!--  ~~~~  -->
-<script src="scripts/button-activations/tou-buttons.js"></script>
-<script src="scripts/button-activations/wcif-buttons.js"></script>
-<!--  ~~~~  -->
-<script src="scripts/copy-text/copy-code.js"></script>
-<script src="scripts/copy-text/copy-string.js"></script>
+<script>
+    document.getElementById('header-title').onclick = function() {    window.location.href = 'https://theblack.cat';};
+</script>
 <!--  ~~~~  -->
 </body>
 </html>
