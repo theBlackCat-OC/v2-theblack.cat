@@ -1,57 +1,44 @@
-      // Check if the browser supports matchMedia
-      if (window.matchMedia) {
-        // Check if the browser prefers dark mode
-        const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-        console.log(prefersDarkMode);  
-        if (prefersDarkMode) {
-          // Dark mode is enabled, activate the dark mode script here
-          console.log('Dark mode is enabled.');
-          window.onloadTurnstileCallback = function() {
-            turnstile.render('#turnstile-widget', {
-              sitekey: '0x4AAAAAAAHvIx2O_lyI4AvC',
-              theme: 'dark',
-              callback: function(token) {
-                console.log(`Challenge Success ${token}`);
-                hideCaptchaAndShowContent();
-              },
-            });
-          };
-          function hideCaptchaAndShowContent() {
-            document.querySelector(".captcha-box").style.display = "";
-            document.querySelector(".captcha-widget").style.display = "none";
-          }
-        } else {
-          // Dark mode is not enabled, activate the light mode script here
-          window.onloadTurnstileCallback = function() {
-            turnstile.render('#turnstile-widget', {
-              sitekey: '0x4AAAAAAAHvIx2O_lyI4AvC',
-              theme: 'light',
-              callback: function(token) {
-                console.log(`Challenge Success ${token}`);
-                hideCaptchaAndShowContent();
-              },
-            });
-          };
-          function hideCaptchaAndShowContent() {
-            document.querySelector(".captcha-box").style.display = "";
-            document.querySelector(".captcha-widget").style.display = "none";
-          }
-        }
-      } else {
-        // Fallback for older browsers that do not support matchMedia
-        console.log('matchMedia not supported, unable to determine dark mode.');
-        window.onloadTurnstileCallback = function() {
-          turnstile.render('#turnstile-widget', {
-            sitekey: '0x4AAAAAAAHvIx2O_lyI4AvC',
-            theme: 'dark',
-            callback: function(token) {
-              console.log(`Challenge Success ${token}`);
-              hideCaptchaAndShowContent();
-            },
-          });
-        };
-        function hideCaptchaAndShowContent() {
-          document.querySelector(".captcha-box").style.display = "";
-          document.querySelector(".captcha-widget").style.display = "none";
-        }
-      }
+// Common configuration for turnstile widget
+const turnstileConfig = {
+  sitekey: '0x4AAAAAAANHhz8aG9kmlKhB',
+  callback: function(token) {
+    console.log(`Challenge Success ${token}`);
+    hideCaptchaAndShowContent();
+  },
+};
+
+// Check if the browser supports matchMedia
+if (window.matchMedia) {
+  // Check if the browser prefers dark mode
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  console.log(prefersDarkMode);
+
+  // Set the theme based on prefersDarkMode
+  const theme = prefersDarkMode ? 'dark' : 'light';
+
+  // Configure the turnstile widget
+  window.onloadTurnstileCallback = function() {
+    turnstile.render('#turnstile-widget', {
+      ...turnstileConfig,
+      theme: theme,
+    });
+  };
+
+} else {
+  // Fallback for older browsers that do not support matchMedia
+  console.log('matchMedia not supported, unable to determine dark mode.');
+
+  // Configure the turnstile widget with a default dark theme
+  window.onloadTurnstileCallback = function() {
+    turnstile.render('#turnstile-widget', {
+      ...turnstileConfig,
+      theme: 'dark',
+    });
+  };
+}
+
+// Common function to hide captcha and show content
+function hideCaptchaAndShowContent() {
+  document.querySelector(".hiddenby-turnstile").style.display = "";
+  document.querySelector(".turnstile-widget").style.display = "none";
+}

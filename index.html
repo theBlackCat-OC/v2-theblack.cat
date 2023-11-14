@@ -17,26 +17,27 @@
 <link rel="stylesheet" type="text/css" href="styles/root/fonts.css">
 <link rel="stylesheet" type="text/css" href="styles/root/glassbox.css">
 <link rel="stylesheet" type="text/css" href="scripts/backgrounds/polkadot-bg/polkadot-background.css">
+<link rel="stylesheet" type="text/css" href="scripts/captcha/turnstile-widget.css">
 <!-- ~~~~ Header CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/header/header-buttons.css">
 <link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
 <link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
-<!-- ~~~~  -->
+<!--  ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/pages/contact/contact.css">
 <link rel="stylesheet" type="text/css" href="styles/pages/info/info.css">
 <!-- ~~~~ Body CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
 <link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
-<!-- ~~~~  -->
+<!--  ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/body/oc-wrapper.css">
 <link rel="stylesheet" type="text/css" href="styles/body/galleries-wrapper.css">
-<!-- ~~~~  -->
+<!--  ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/bodyref-card.css">
 <link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/commworks-cards.css">
-<!-- ~~~~  -->
+<!--  ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/body/oc-cards/tou-card.css">
 <link rel="stylesheet" type="text/css" href="styles/body/oc-cards/wcif-card.css">
-<!-- ~~~~ -->
+<!--  ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/footer/footer-display.css">
 <!--  ~~~~ Pages CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/pages/tou/tou-page.css">
@@ -70,7 +71,14 @@
         <span class="sanfrancisco-bold" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span>
         <span class="sanfrancisco-bold"> here to dismiss.</span>
     </div>
-    <div class="contact-button-wrapper loading-animation" id="contact-button-wrapper">
+    <div class="turnstile-widget glassbox-10">
+        <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
+        <br><br>
+        <br><br>
+        <div id="turnstile-widget" class="turnstile-widget"></div>
+        <br>
+    </div>
+    <div class="contact-button-wrapper loading-animation hiddenby-turnstile" id="contact-button-wrapper" style="display: none;">
         <div class="contact-button cursor-pointer" id="email-card" onclick="document.getElementById('email-container').style.display = ''; document.getElementById('email-card').style.cursor = 'auto';">
             <img src="resources/images/icons/email.svg" class="contact-button-icon display-inlineblock">
             <h2 class="text-black productsans-bold two-em display-inlineblock">Email</h2>
@@ -424,6 +432,8 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 <footer class="textalign-center" id="footer">
 </footer>
 <!--  ~~~~  -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+<script src="scripts/captcha/turnstile-contact.js"></script>
 <script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>
 <script src="scripts/goToTop/goToTop.js"></script>
 <script src="scripts/root/link-parser.js"></script>
@@ -437,14 +447,14 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 <script src="styles/body/oc-cards/wcif-card-bg.js"></script>
 <script src="styles/body/oc-cards/tou-card-bg.js"></script>
 <script src="styles/body/card-tap-detection.js"></script>
-<!-- ~~~~  -->
+<!--  ~~~~  -->
 <script src="styles/header/background-header.js"></script>
-<!-- ~~~~ -->
+<!--  ~~~~  -->
 <script src="scripts/button-activations/tou-buttons.js"></script>
 <script src="scripts/button-activations/wcif-buttons.js"></script>
-<!-- ~~~~ -->
+<!--  ~~~~  -->
 <script src="scripts/copy-text/copy-code.js"></script>
 <script src="scripts/copy-text/copy-string.js"></script>
-<!-- ~~~~  -->
+<!--  ~~~~  -->
 </body>
 </html>
