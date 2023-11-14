@@ -11,7 +11,7 @@
 .turnstile-widget-wrapper-commworks{
     position: absolute;
     text-align: center;
-    top: 50%;
+    top: 1000%;
     left: 23%;
     width: 50%;
     padding: 30px;
@@ -26,7 +26,7 @@
         left: 10%;
     }
     .turnstile-widget-wrapper-commworks{
-        top: 35%;
+        top: 1000%;
         width: 75%;
         padding: 2.5%;
         left: 10%;
