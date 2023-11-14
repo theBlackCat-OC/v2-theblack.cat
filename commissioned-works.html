@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+<!-- ~~~~ Meta ~~~~ -->
+<meta charset="utf-8">
+<meta name="color-scheme" content="light, dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Linkhub: &quot;the Black Cat&quot;"/>
+<meta property="og:description" content="Linkhub for &quot;the Black Cat&quot; Original Character content."/>
+<meta name="description" content="Linkhub for &quot;the Black Cat&quot; Original Character content, where you can find galleries, terms of use, contact methods and the FFXIV© mods WCIF.">
+<meta property="og:image" content="https://dev.theblack.cat/resources/images/bg-images/horizontal/juurikun-horizontal.avif"/>
+<meta property="og:url" content="https://dev.theblack.cat/"/>
+<!-- ~~~~ Root CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/root/root.css">
+<link rel="stylesheet" type="text/css" href="styles/root/loading-animations.css">
+<link rel="stylesheet" type="text/css" href="styles/root/gototop-button.css">
+<link rel="stylesheet" type="text/css" href="styles/root/fonts.css">
+<link rel="stylesheet" type="text/css" href="styles/root/glassbox.css">
+<link rel="stylesheet" type="text/css" href="scripts/backgrounds/polkadot-bg/polkadot-background.css">
+<link rel="stylesheet" type="text/css" href="scripts/captcha/turnstile-widget.css">
+<!-- ~~~~ Header CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/header/header-buttons.css">
+<link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
+<link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
+<!--  ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/pages/contact/contact.css">
+<link rel="stylesheet" type="text/css" href="styles/pages/info/info.css">
+<!-- ~~~~ Body CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
+<link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
+<!--  ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/body/oc-wrapper.css">
+<link rel="stylesheet" type="text/css" href="styles/body/galleries-wrapper.css">
+<!--  ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/bodyref-card.css">
+<link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/commworks-cards.css">
+<!--  ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/body/oc-cards/tou-card.css">
+<link rel="stylesheet" type="text/css" href="styles/body/oc-cards/wcif-card.css">
+<!--  ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/pages/commworks/commworks.css">
+<!--  ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/footer/footer-display.css">
+<!--  ~~~~ Pages CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/pages/tou/tou-page.css">
+<link rel="stylesheet" type="text/css" href="styles/pages/wcif/wcif-page.css">
+<!--  ~~~~ Title ~~~~ -->
+<title>Linkhub: &quot;the Black Cat&quot;</title>
+</head>
+<!--  ~~~~ Body ~~~~ -->
+<body>
+<!--  ~~~~ Header ~~~~ -->
+<header id="header">
+<div id="header-wrapper">
+    <div id="header-title" class="user-select-none">
+        <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text">&quot;the Black Cat&quot;</span>
+    </div>
+    <div id="header-buttons-wrapper">
+        <button id="header-contact">
+            <img src="resources/images/icons/contact.svg" class="img-inverter" id="contact-button-icon" alt="Thank you SVGRepo.com!">
+            <span class="sanfrancisco-bold text-black" id="contact-button-text">Contact</span>
+        </button>
+        <button id="header-info">
+            <img src="resources/images/icons/info.svg" class="img-inverter" alt="Information - by Stockio at SVGRepo.com" id="info-button-icon" alt="Thank you SVGRepo.com!">
+            <span class="sanfrancisco-bold text-black" id="info-button-info">Info</span>
+        </button>
+    </div>
+</div>
+<!--  ~~~~ Contact ~~~~ -->
+<div class="contact-page-wrapper" id="contact-page-wrapper" style="display: none;">
+    <div class="textalign-center text-black cursor-pointer" onclick="document.getElementById('contact-page-wrapper').style.display = 'none';">
+        <br>
+        <span class="sanfrancisco-bold" id="info-click-mobile">👆🏿 Tap</span>
+        <span class="sanfrancisco-bold" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span>
+        <span class="sanfrancisco-bold"> here to dismiss.</span>
+    </div>
+    <div class="turnstile-widget glassbox-10">
+        <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
+        <br><br>
+        <br><br>
+        <div id="turnstile-widget" class="turnstile-widget"></div>
+        <br>
+    </div>
+    <div class="contact-button-wrapper loading-animation hiddenby-turnstile" id="contact-button-wrapper" style="display: none;">
+        <div class="contact-button cursor-pointer" id="email-card" onclick="document.getElementById('email-container').style.display = ''; document.getElementById('email-card').style.cursor = 'auto';">
+            <img src="resources/images/icons/email.svg" class="contact-button-icon display-inlineblock">
+            <h2 class="text-black productsans-bold two-em display-inlineblock">Email</h2>
+            <div class="margin-bottom-2vh loading-animation-longer" id="email-container" style="display: none;">
+                <a href="mailto:contact-2023@mail.theblack.cat" id="email-addr">
+                    <span class="display-inlineblock text-black latex-regular one-em" id="email-addr-link">
+                        contact-2023@mail.theblack.cat
+                    </span>
+                </a>
+                <img src="resources/images/icons/copy.svg" width="20" height="20" class="display-inlineblock img-inverter cursor-pointer" id="email-copy-icon">
+            </div>
+        </div>
+        <a href="https://x.com/di_theblackcat" target="_blank" rel="me">
+            <div class="contact-button">
+                <img src="resources/images/icons/icons8-twitter.svg" class="contact-button-icon display-inlineblock" alt="Twitter icon by Icons8">
+                <h2 class="text-black chirp two-em display-inlineblock">Twitter</h2>
+                <img src="resources/images/icons/new-window.svg" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+            </div>
+        </a>
+        <div class="contact-button cursor-pointer" id="discord-card" onclick="document.getElementById('discord-container').style.display = ''; document.getElementById('discord-card').style.cursor = 'auto';">
+            <img src="resources/images/icons/discord-black.svg" class="contact-button-icon img-inverter display-inlineblock">
+            <h2 class="text-black unisans-heavy two-em display-inlineblock">DISCORD</h2>
+            <div class="margin-bottom-2vh loading-animation-longer" id="discord-container" style="display: none;">
+                <span class="display-inlineblock text-black latex-regular one-em" id="dc-handler" style="user-select: all;">
+                    di_theblackcat
+                </span>
+                <img src="resources/images/icons/copy.svg" width="20" height="20" class="display-inlineblock img-inverter cursor-pointer" id="dc-copy-icon">
+            </div>
+        </div>
+        <a href="https://www.pixiv.net/en/users/98072277" target="_blank" rel="me">
+            <div class="contact-button">
+                <img src="resources/images/icons/pixiv.svg" class="contact-button-icon display-inlineblock">
+                <h2 class="text-black hiragino-maru-gothic-pro two-em display-inlineblock">pixiv</h2>
+                <img src="resources/images/icons/new-window.svg" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+            </div>
+        </a>
+        <a href="https://misskey.io/@theblackcat" rel="me" target="_blank">
+            <div class="contact-button">
+                <img src="resources/images/icons/misskey.svg" class="img-inverter contact-button-icon display-inlineblock">
+                <h2 class="text-black hiragino-maru-gothic-pro two-em display-inlineblock">Misskey</h2>
+                <img src="resources/images/icons/new-window.svg" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+            </div>
+        </a>
+        <a href="https://aethy.com/@di_theblackcat" target="_blank" rel="me">
+            <div class="contact-button">
+                <img src="resources/images/icons/mastodon.svg" class="contact-button-icon display-inlineblock">
+                <h2 class="text-black gilroy-bold two-em display-inlineblock">Aethy</h2>
+                <img src="resources/images/icons/new-window.svg" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+            </div>
+        </a>
+    </div>
+</div>
+<!--  ~~~~ Info ~~~~ -->
+<div id="info-page-wrapper" class="text-black" style="display: none;"onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
+    <div id="info-card-wrapper" class="loading-animation" onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
+        <span class="sanfrancisco-bold two-em">Hello and Welcome! 👋🏿</span>
+        <br>
+        <span class="sanfrancisco-rounded onepointfive-em">In this website you can find 🔍:</span>
+        <ul>
+            <li>
+                <a href="https://theblack.cat/commissioned-works" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/gallery.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em display-inlineblock">Commissioned Works Gallery</span>
+                    <img src="resources/images/icons/new-window.svg " width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="https://reference.theblack.cat" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/skeleton.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em">Body Reference Gallery</span>
+                    <img src="resources/images/icons/new-window.svg " width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/contract.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em">Original Character Terms of Use</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/cube.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em">FFXIV&copy; WCIF</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/contact.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em">Contact methods</span>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <span class="sanfrancisco-regular onepointfive-em">You can also ask me a question in these portals ✋🏿:</span>
+        <ul>
+            <li>
+                <a href="https://tellonym.me/ditheblackcat" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/icons8-tellonym.svg" class=" info-icon" alt="Thank you icons8.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em">Tellonym</span>
+                    <img src="resources/images/icons/new-window.svg " width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+                </a>
+            </li>
+            <li>
+                <a href="https://curiouscat.live/theBlackCat_OC" target="_blank">
+                    <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                        <img src="resources/images/icons/icons8-curious-cat.svg" class=" info-icon" alt="Thank you icons8.com!">
+                    </div>
+                    <span class="sanfrancisco-regular one-em">CuriousCat</span>
+                    <img src="resources/images/icons/new-window.svg " width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+                </a>
+            </li>
+        </ul>
+        <br>
+        <span class="sanfrancisco-rounded onepointfive-em">And check this webpage repository in 🤓:</span>
+            <ul>
+                <li>
+                    <a href="https://github.com/theBlackCat-OC/v2-theblack.cat" target="_blank">
+                        <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
+                            <img src="resources/images/icons/github.svg" class="img-inverter github-icon" alt="Thank you SVGRepo.com!">
+                        </div>
+                        <span class="sanfrancisco-regular one-em">GitHub</span>
+                        <img src="resources/images/icons/new-window.svg " width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
+                    </a>
+                </li>
+            </ul>
+        </span>
+        <br><br>
+        <span class="sanfrancisco-bold">Thank you for reading and have a good time! 💖</span><br>
+        <div class="textalign-right"><span class="sanfrancisco-light" id="info-click-mobile">👆🏿 Tap</span><span class="sanfrancisco-light" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span><span class="sanfrancisco-light"> anywhere to dismiss.</span></div>
+        <br>
+    </div>
+</div>
+</header>
+<!-- ~~~~ Commissioned Works Gallery ~~~~ -->
+<br><br><br><br><br><br><br><br> <!-- the jank lmaoo-->
+<div class="turnstile-widget glassbox-10">
+    <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
+    <br><br>
+    <br><br>
+    <div id="turnstile-widget" class="turnstile-widget"></div>
+    <br>
+</div>
+<div class="gallery-container hiddenby-turnstile" style="display: none;">
+        <div class="tag-container-parent">
+            <div class="tag-container" id="tagContainer"></div>
+        </div>
+        <div class="gallery" id="gallery"></div>  
+</div>
+<div id="imageModal" class="modal">
+        <span class="close">&times;</span>
+        <img class="modal-content" id="zoomedImage">
+</div>
+<!--  ~~~~ Go to Top Button ~~~~ -->
+<div class="floating-gototop-button glassbox-25" onclick="goToTop()" id="goTopBtn-footer" style="display: none;">
+    <div class="cursor-pointer">
+        <img class="floating-gototop-icon img-inverter" src="resources/images/icons/chevron-up.svg" title="Thank you SVGRepo.com!">
+    </div>
+</div>
+<!--  ~~~~ Footer ~~~~ -->
+<footer class="textalign-center">
+</footer>
+<!--  ~~~~ Tip Bubble ~~~~  -->
+<div class="bubble-trigger-gallery cursor-help user-select-none">
+            <img src="https://cdn.theblack.cat/resources/thank-you-flaticons/tip.png" width="28" height="28">
+</div>
+<div class="bubble-gallery user-select-none cursor-help text-black">
+          ●&nbsp;<span class="productsans-regular">Click on any <span class="productsans-bold">tag</span> to browse the gallery. Tags are exclusive from each other.</span>
+          <br>●&nbsp;<span class="productsans-regular">Click on the image on the card to zoom it. Click on the X or away to dismiss.</span>
+          <br>●&nbsp;<span class="productsans-bold">Portraiture</span> <span class="productsans-regular"> tags are always SFW.</span>
+          <br>●&nbsp;<span class="productsans-regular">The <span class="productsans-bold">Degen</span> tag is a standalone tag that includes all NSFW works that are not exclusively vanilla.</span>&nbsp;<span class="latex-regular">Content Warning Beware!</span>
+</div>
+<!--  ~~~~ Scripts ~~~~  -->
+<script src="styles/pages/commworks/commworks-engine.js"></script>
+<script src="styles/pages/commworks/commworks-gallery.js"></script>
+<!--  ~~~~  -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+<script src="scripts/captcha/turnstile-commworks.js"></script>
+<!--  ~~~~  -->
+<script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>
+<script src="scripts/goToTop/goToTop.js"></script>
+<script src="scripts/root/link-parser.js"></script>
+<!--  ~~~~  -->
+<script src="styles/pages/contact/contact-show.js"></script>
+<script src="styles/pages/info/info-show.js"></script>
+<script src="styles/pages/info/info-hide.js"></script>
+<!--  ~~~~  -->
+<script src="styles/body/gallery-cards/bodyref-card-bg.js"></script>
+<script src="styles/body/gallery-cards/commworks-bg.js"></script>
+<script src="styles/body/oc-cards/wcif-card-bg.js"></script>
+<script src="styles/body/oc-cards/tou-card-bg.js"></script>
+<script src="styles/body/card-tap-detection.js"></script>
+<!--  ~~~~  -->
+<script src="styles/header/background-header.js"></script>
+<!--  ~~~~  -->
+<script src="scripts/button-activations/tou-buttons.js"></script>
+<script src="scripts/button-activations/wcif-buttons.js"></script>
+<!--  ~~~~  -->
+<script src="scripts/copy-text/copy-code.js"></script>
+<script src="scripts/copy-text/copy-string.js"></script>
+<!--  ~~~~  -->
+</body>
+</html>
