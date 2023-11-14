@@ -1,19 +1,29 @@
 document.addEventListener("DOMContentLoaded", function () {
     var bodyCardsWrapper = document.getElementById('body-cards-wrapper');
+    var infoPageWrapper = document.getElementById('info-page-wrapper');
+    var contactPageWrapper = document.getElementById('contact-page-wrapper');
     var touPage = document.getElementById('tou-page');
     var touBackButton = document.getElementById('tou-revert');
     var wcifPage = document.getElementById('wcif-page');
     var wcifBackButton = document.getElementById('wcif-revert');
 
-    if (window.location.href.includes("contact")) {
+    function showInfoPage() {
+        infoPageWrapper.style.display = '';
+        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+    function showContactPage() {
+        contactPageWrapper.style.display = '';
+    }
+
+    if (urlParams.has("goto") && urlParams.get("goto") === "contact") {
         showContactPage();
     }
 
-    if (window.location.href.includes("info")) {
+    if (urlParams.has("goto") && urlParams.get("goto") === "info") {
         showInfoPage();
     }
 
-    if (window.location.href.includes("tou")) {
+    if (urlParams.has("goto") && urlParams.get("goto") === "tou") {
         document.getElementById('tou-card').addEventListener('click', function () {
             if (bodyCardsWrapper.style.display !== 'none') {
                 bodyCardsWrapper.style.display = 'none';
@@ -26,7 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
         });
     }
 
-    if (window.location.href.includes("wcif")) {
+    if (urlParams.has("goto") && urlParams.get("goto") === "wcif") {
         document.getElementById('wcif-card').addEventListener('click', function () {
             if (bodyCardsWrapper.style.display !== 'none') {
                 bodyCardsWrapper.style.display = 'none';
