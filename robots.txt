@@ -1,5 +1,3 @@
 User-agent: *
 Disallow: /*contact-page-wrapper
-Disallow: /commissioned-works.html
-Disallow: /commissioned-works
 Allow: /
