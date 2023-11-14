@@ -4,8 +4,17 @@ document.addEventListener('DOMContentLoaded', function () {
 
     function showContactPage() {
         contactPageWrapper.style.display = '';
-        window.scrollTo({ top: 0, behavior: 'smooth' });
+    }
+
+    function hideContactPage() {
+        contactPageWrapper.style.display = 'none';
     }
 
     headerContact.addEventListener('click', showContactPage);
+
+    document.addEventListener('keydown', function (event) {
+        if (event.key === 'Escape') {
+            hideContactPage();
+        }
+    });
 });

@@ -1,145 +1,121 @@
 <!DOCTYPE html>
 <html lang="en-GB">
 <head>
-        <!-- ~~~~ Meta ~~~~ -->
-        <meta charset="utf-8">
-        <meta name="color-scheme" content="light, dark">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <!-- ~~~~ Root CSS ~~~~ -->
-        <link rel="stylesheet" type="text/css" href="styles/root/root.css">
-        <link rel="stylesheet" type="text/css" href="styles/root/loading-animations.css">
-        <link rel="stylesheet" type="text/css" href="styles/root/gototop-button.css">
-        <link rel="stylesheet" type="text/css" href="styles/root/fonts.css">
-        <link rel="stylesheet" type="text/css" href="styles/root/glassbox.css">
-        <link rel="stylesheet" type="text/css" href="scripts/backgrounds/polkadot-bg/polkadot-background.css">
-        <!-- ~~~~ Header CSS ~~~~ -->
-        <link rel="stylesheet" type="text/css" href="styles/header/header-buttons.css">
-        <link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
-        <link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
-        <!-- ~~~~ Body CSS ~~~~ -->
-        <link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
-        <link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
-        <!-- ~~~~  -->
-        <link rel="stylesheet" type="text/css" href="styles/body/oc-wrapper.css">
-        <link rel="stylesheet" type="text/css" href="styles/body/galleries-wrapper.css">
-        <!-- ~~~~  -->
-        <link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/bodyref-card.css">
-        <link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/commworks-cards.css">
-        <!-- ~~~~  -->
-        <link rel="stylesheet" type="text/css" href="styles/body/oc-cards/tou-card.css">
-        <link rel="stylesheet" type="text/css" href="styles/body/oc-cards/wcif-card.css">
-        <!-- ~~~~ -->
-        <link rel="stylesheet" type="text/css" href="styles/footer/footer-display.css">
-        <!-- ~~~~ Pages CSS ~~~~ -->
-        <link rel="stylesheet" type="text/css" href="styles/pages/tou/tou-page.css">
-        <link rel="stylesheet" type="text/css" href="styles/pages/wcif/wcif-page.css">
-        <!-- ~~~~ Title ~~~~ -->
-        <title>Linkhub. "the Black Cat"</title>
-    <style>
-.contact-page-wrapper{
-    width: 100%;
-    height: 100vh;
-    position: absolute;
-    inset: 0;
-}
-.contact-button-wrapper{
-    margin-top: 5%;
-    margin-left: 34.6%;
-}
-@media (prefers-color-scheme: light) {
-    .contact-page-wrapper{
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(4.9px);
-        -webkit-backdrop-filter: blur(4.9px);
-    }
-    .contact-button{
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(4.9px);
-        -webkit-backdrop-filter: blur(4.9px);
-    }
-    .contact-button-close{
-        background: rgba(255, 255, 255, 0.1);
-        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-        backdrop-filter: blur(4.9px);
-        -webkit-backdrop-filter: blur(4.9px);
-    }
-}
-@media (prefers-color-scheme: dark) {
-    .contact-page-wrapper{
-        background: rgba(0, 0, 0, 0.09);
-        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(4.9px);
-        -webkit-backdrop-filter: blur(4.9px);
-    }
-    .contact-button{
-        background: rgba(0, 0, 0, 0.09);
-        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(4.9px);
-        -webkit-backdrop-filter: blur(4.9px);
-    }
-    .contact-button-close{
-        background: rgba(0, 0, 0, 0.09);
-        box-shadow: 0 4px 30px rgba(255, 255, 255, 0.1);
-        backdrop-filter: blur(4.9px);
-        -webkit-backdrop-filter: blur(4.9px);
-    }
-}
+<!-- ~~~~ Meta ~~~~ -->
+<meta charset="utf-8">
+<meta name="color-scheme" content="light, dark">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta property="og:title" content="Linkhub: the Black Cat"/>
+<meta property="og:description" content="Linkhub for the Black Cat content."/>
+<meta name="description" content="Linkhub for the Black Cat content: Galleries, Body References, Terms of Use and FFXIV© WCIF and Contact and Info pages.">
+<meta property="og:image" content="https://dev.theblack.cat/resources/images/bg-images/horizontal/juurikun-horizontal.avif"/>
+<meta property="og:url" content="https://dev.theblack.cat/"/>
+<!-- ~~~~ Root CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/root/root.css">
+<link rel="stylesheet" type="text/css" href="styles/root/loading-animations.css">
+<link rel="stylesheet" type="text/css" href="styles/root/gototop-button.css">
+<link rel="stylesheet" type="text/css" href="styles/root/fonts.css">
+<link rel="stylesheet" type="text/css" href="styles/root/glassbox.css">
+<link rel="stylesheet" type="text/css" href="scripts/backgrounds/polkadot-bg/polkadot-background.css">
+<!-- ~~~~ Header CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/header/header-buttons.css">
+<link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
+<link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
+<!-- ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/pages/contact/contact.css">
+<link rel="stylesheet" type="text/css" href="styles/pages/info/info.css">
+<!-- ~~~~ Body CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
+<link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
+<!-- ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/body/oc-wrapper.css">
+<link rel="stylesheet" type="text/css" href="styles/body/galleries-wrapper.css">
+<!-- ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/bodyref-card.css">
+<link rel="stylesheet" type="text/css" href="styles/body/gallery-cards/commworks-cards.css">
+<!-- ~~~~  -->
+<link rel="stylesheet" type="text/css" href="styles/body/oc-cards/tou-card.css">
+<link rel="stylesheet" type="text/css" href="styles/body/oc-cards/wcif-card.css">
+<!-- ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/footer/footer-display.css">
+<!-- ~~~~ Pages CSS ~~~~ -->
+<link rel="stylesheet" type="text/css" href="styles/pages/tou/tou-page.css">
+<link rel="stylesheet" type="text/css" href="styles/pages/wcif/wcif-page.css">
+<!-- ~~~~ Title ~~~~ -->
+<title>Linkhub: "the Black Cat"</title>
+<style>
 
-.contact-button{
-    user-select: none;
-    padding: 3px;
-    height: 30px;
-    width: 33vw;
-    margin-bottom: 2vh;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform ease 0.3s;
-    height: auto;
-}
-.contact-button:hover{
-    transform: scale(1.03);
-}
-
-.contact-button-close{
-    user-select: none;
-    padding: 13px;
-    height: 30px;
-    width: 10vw;
-    margin-bottom: 2vh;
-    margin-left: 11vw;
-    text-align: center;
-    border-radius: 8px;
-    transition: transform ease 0.3s;
-    height: auto;
-    cursor: pointer;
-}
-.contact-button-close:hover{
-    transform: scale(1.03);
-}
-.contact-button-icon{
-    width: 3rem;
-    height: 3rem;
-    margin-right: 0.8rem;
-    vertical-align: -13px;
-    cursor: pointer;
-}
-#email-addr-link:hover{
-    color:#18F0FF;
-}
-#contact-icon-close{
-    position: sticky;
-    top:10vh;
-    left:15vw;
-    z-index: 1;
-}
-    </style>
+</style>
 </head>
 <body>
-
+<div id="info-page-wrapper" class="text-black">
+    <div class="info-close textalign-center" onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
+        <img src="resources/images/icons/close.svg" class="display-inlineblock" width="30" height="30" style="vertical-align: -4px;">
+    </div>
+    <div id="info-card-wrapper">
+        <span class="sanfrancisco-bold two-em">Hello and Welcome! 👋🏿</span>
+        <br>
+        <span class="sanfrancisco-rounded onepointfive-em">In this website you can find 🔍:</span>
+        <ul>
+            <li>
+                <a href="https://theblack.cat/commissioned-works" target="_blank">
+                    <img src="resources/images/icons/image-ui.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Commissioned Works Gallery</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="https://reference.theblack.cat" target="_blank">
+                    <img src="resources/images/icons/skeleton.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Body Reference Gallery</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <img src="resources/images/icons/contract.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Terms of Use</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <img src="resources/images/icons/cube.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">FFXIV&copy; WCIF</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <img src="resources/images/icons/contact.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Contact methods</span>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <span class="sanfrancisco-regular onepointfive-em">You can also ask me a question in these portals ✋🏿:</span>
+        <ul>
+            <li>
+                <a href="https://tellonym.me/ditheblackcat" target="_blank">
+                    <img src="resources/images/icons/icons8-tellonym.svg" class=" info-icon" alt="Thank you icons8.com!">
+                    <span class="sanfrancisco-regular one-em">Tellonym</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="https://curiouscat.live/theBlackCat_OC" target="_blank">
+                    <img src="resources/images/icons/icons8-curious-cat.svg" class=" info-icon" alt="Thank you icons8.com!">
+                    <span class="sanfrancisco-regular one-em">CuriousCat</span>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <span class="sanfrancisco-rounded onepointfive-em">And check the <a href="https://github.com/theBlackCat-OC/v2-theblack.cat" target="_blank"><img src="resources/images/icons/github.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!"> GitHub page repository</a> here.</span>
+        <br><br>
+        <span>Thank you for reading and good</span>
+    </div>
+</div>
 </body>
 <!-- ~~~~  -->
 <script src="scripts/backgrounds/polkadot-bg/nightmode-polkadot.js"></script>
-<script src="scripts/copy-text/copy-string.js"></script>
 </html>

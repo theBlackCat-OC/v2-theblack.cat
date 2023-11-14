@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta property="og:title" content="Linkhub: the Black Cat"/>
 <meta property="og:description" content="Linkhub for the Black Cat content."/>
-<meta property="og:image" content="resources/images/bg-images/horizontal/juurikun-horizontal.avif"/>
+<meta property="og:image" content="https://dev.theblack.cat/resources/images/bg-images/horizontal/juurikun-horizontal.avif"/>
 <meta property="og:url" content="https://dev.theblack.cat/"/>
 <!-- ~~~~ Root CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/root/root.css">
@@ -22,6 +22,7 @@
 <link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
 <!-- ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/pages/contact/contact.css">
+<link rel="stylesheet" type="text/css" href="styles/pages/info/info.css">
 <!-- ~~~~ Body CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
 <link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
@@ -62,8 +63,11 @@
 </div>
 <!-- ~~~~ Contact ~~~~ -->
 <div class="contact-page-wrapper" id="contact-page-wrapper" style="display: none;">
-    <div class="contact-button-close textalign-center" onclick="document.getElementById('contact-page-wrapper').style.display = 'none';">
-        <img src="resources/images/icons/close.svg" class="display-inlineblock" width="30" height="30">
+    <div class="textalign-center text-black cursor-pointer" onclick="document.getElementById('contact-page-wrapper').style.display = 'none';">
+        <br>
+        <span class="sanfrancisco-bold" id="info-click-mobile">Tap</span>
+        <span class="sanfrancisco-bold" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span>
+        <span class="sanfrancisco-bold"> here to dismiss.</span>
     </div>
     <div class="contact-button-wrapper loading-animation" id="contact-button-wrapper">
         <div class="contact-button cursor-pointer" id="email-card" onclick="document.getElementById('email-container').style.display = ''; document.getElementById('email-card').style.cursor = 'auto';">
@@ -116,6 +120,72 @@
                 <img src="resources/images/icons/new-window.svg" width="20" height="20" class="vertical-align-minus0dot4vh img-inverter" title="Thank you SVGRepo.com!">
             </div>
         </a>
+    </div>
+</div>
+<!-- ~~~~ Info ~~~~ -->
+<div id="info-page-wrapper" class="text-black" style="display: none;"onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
+    <div id="info-card-wrapper" class="loading-animation" onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
+        <span class="sanfrancisco-bold two-em">Hello and Welcome! 👋🏿</span>
+        <br>
+        <span class="sanfrancisco-rounded onepointfive-em">In this website you can find 🔍:</span>
+        <ul>
+            <li>
+                <a href="https://theblack.cat/commissioned-works" target="_blank">
+                    <img src="resources/images/icons/image-ui.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Commissioned Works Gallery</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="https://reference.theblack.cat" target="_blank">
+                    <img src="resources/images/icons/skeleton.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Body Reference Gallery</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <img src="resources/images/icons/contract.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Terms of Use</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <img src="resources/images/icons/cube.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">FFXIV&copy; WCIF</span>
+                </a>
+            </li>
+            <br>
+            <li>
+                <a href="" target="_blank">
+                    <img src="resources/images/icons/contact.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
+                    <span class="sanfrancisco-regular one-em">Contact methods</span>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <span class="sanfrancisco-regular onepointfive-em">You can also ask me a question in these portals ✋🏿:</span>
+        <ul>
+            <li>
+                <a href="https://tellonym.me/ditheblackcat" target="_blank">
+                    <img src="resources/images/icons/icons8-tellonym.svg" class=" info-icon" alt="Thank you icons8.com!">
+                    <span class="sanfrancisco-regular one-em">Tellonym</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://curiouscat.live/theBlackCat_OC" target="_blank">
+                    <img src="resources/images/icons/icons8-curious-cat.svg" class=" info-icon" alt="Thank you icons8.com!">
+                    <span class="sanfrancisco-regular one-em">CuriousCat</span>
+                </a>
+            </li>
+        </ul>
+        <br>
+        <span class="sanfrancisco-rounded onepointfive-em">And check the <a href="https://github.com/theBlackCat-OC/v2-theblack.cat" target="_blank"><img src="resources/images/icons/github.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!"> GitHub page repository</a> here.</span>
+        <br><br>
+        <span class="sanfrancisco-bold">Thank you for reading and have a good time! 💖</span><br>
+        <div class="textalign-right"><span class="sanfrancisco-light" id="info-click-mobile">Tap</span><span class="sanfrancisco-light" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span><span class="sanfrancisco-light"> anywhere to dismiss.</span></div>
+        <br>
     </div>
 </div>
 </header>
@@ -326,7 +396,8 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 <script src="scripts/goToTop/goToTop.js"></script>
 <!-- ~~~~  -->
 <script src="styles/pages/contact/contact-show.js"></script>
-<script src="styles/pages/contact/contact-hide-esc.js"></script>
+<script src="styles/pages/info/info-show.js"></script>
+<script src="styles/pages/info/info-hide.js"></script>
 <!-- ~~~~  -->
 <script src="styles/body/gallery-cards/bodyref-card-bg.js"></script>
 <script src="styles/body/gallery-cards/commworks-bg.js"></script>
