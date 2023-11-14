@@ -1,7 +1,7 @@
 document.addEventListener('DOMContentLoaded', function () {
     var bodyCardsWrapper = document.getElementById('body-cards-wrapper');
-    var touPage = document.getElementById('wcif-page');
-    var revertChangesButton = document.getElementById('wcif-revert');
+    var wcifPage = document.getElementById('wcif-page');
+    var wcifBackButton = document.getElementById('wcif-revert');
     var headerTitleText = document.getElementById('header-title-text');
 
     function vibrate() {
@@ -11,19 +11,19 @@ document.addEventListener('DOMContentLoaded', function () {
     }
 
     function handleRevertAction() {
-        vibrate(); // Add vibration effect
+        vibrate();
         bodyCardsWrapper.style.display = '';
-        touPage.style.display = 'none';
-        revertChangesButton.style.display = 'none';
+        wcifPage.style.display = 'none';
+        wcifBackButton.style.display = 'none';
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
     document.getElementById('wcif-card').addEventListener('click', function () {
-        vibrate(); // Add vibration effect
+        vibrate();
         if (bodyCardsWrapper.style.display !== 'none') {
             bodyCardsWrapper.style.display = 'none';
-            touPage.style.display = '';
-            revertChangesButton.style.display = '';
+            wcifPage.style.display = '';
+            wcifBackButton.style.display = '';
         } else {
             handleRevertAction();
         }

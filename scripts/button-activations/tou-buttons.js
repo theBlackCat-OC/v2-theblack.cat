@@ -1,12 +1,14 @@
 document.addEventListener('DOMContentLoaded', function () {
     var bodyCardsWrapper = document.getElementById('body-cards-wrapper');
     var touPage = document.getElementById('tou-page');
-    var revertChangesButton = document.getElementById('tou-revert');
+    var touBackButton = document.getElementById('tou-revert');
     var headerTitleText = document.getElementById('header-title-text');
 
     function vibrate() {
         if ('vibrate' in navigator) {
             navigator.vibrate(100);
+        } else{
+            console.log('vibrate() is not supported');
         }
     }
 
@@ -14,7 +16,7 @@ document.addEventListener('DOMContentLoaded', function () {
         vibrate(); // Add vibration effect
         bodyCardsWrapper.style.display = '';
         touPage.style.display = 'none';
-        revertChangesButton.style.display = 'none';
+        touBackButton.style.display = 'none';
         window.scrollTo({ top: 0, behavior: 'smooth' });
     }
 
@@ -23,7 +25,7 @@ document.addEventListener('DOMContentLoaded', function () {
         if (bodyCardsWrapper.style.display !== 'none') {
             bodyCardsWrapper.style.display = 'none';
             touPage.style.display = '';
-            revertChangesButton.style.display = '';
+            touBackButton.style.display = '';
         } else {
             handleRevertAction();
         }
@@ -32,10 +34,12 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.getElementById('tou-revert').addEventListener('click', function () {
         handleRevertAction();
+        vibrate(); // Add vibration effect
     });
 
     headerTitleText.addEventListener('click', function () {
         handleRevertAction();
+        vibrate(); // Add vibration effect
     });
 
     // Add event listener for the 'Esc' key
