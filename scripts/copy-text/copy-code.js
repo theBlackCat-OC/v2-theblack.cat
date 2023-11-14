@@ -8,9 +8,9 @@ document.addEventListener('DOMContentLoaded', () => {
       navigator.clipboard.writeText(codeText)
         .then(() => {
           console.log('Code copied to clipboard');
-          copyRegularCPlusButton.innerHTML = '<img src="../../resources/images/icons/check.png" width="19" height="19" class="inline-icon img-inverter">';
+          copyRegularCPlusButton.innerHTML = '<img src="../../resources/images/icons/check.svg" width="19" height="19" class="inline-icon">';
           setTimeout(() => {
-            copyRegularCPlusButton.innerHTML = '<img src="../../resources/images/icons/copy.png" width="19" height="19" class="inline-icon img-inverter">';
+            copyRegularCPlusButton.innerHTML = '<img src="../../resources/images/icons/copy.svg" width="19" height="19" class="inline-icon img-inverter">';
           }, 3000);
         })
         .catch((err) => {
@@ -30,9 +30,9 @@ document.addEventListener('DOMContentLoaded', () => {
       navigator.clipboard.writeText(codeText)
         .then(() => {
           console.log('Code copied to clipboard');
-          copyEXQBCPlusButton.innerHTML = '<img src="../../resources/images/icons/check.png" width="19" height="19" class="inline-icon img-inverter">';
+          copyEXQBCPlusButton.innerHTML = '<img src="../../resources/images/icons/check.svg" width="19" height="19" class="inline-icon">';
           setTimeout(() => {
-            copyEXQBCPlusButton.innerHTML = '<img src="../../resources/images/icons/copy.png" width="19" height="19" class="inline-icon img-inverter">';
+            copyEXQBCPlusButton.innerHTML = '<img src="../../resources/images/icons/copy.svg" width="19" height="19" class="inline-icon img-inverter">';
           }, 3000);
         })
         .catch((err) => {

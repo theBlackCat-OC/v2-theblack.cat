@@ -9,9 +9,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Failed to copy email: ', err);
       });
 
-    document.getElementById('email-copy-icon').src = "resources/images/icons/check.png";
+    document.getElementById('email-copy-icon').src = "resources/images/icons/check.svg";
     setTimeout(function() {
-      document.getElementById('email-copy-icon').src = "resources/images/icons/copy.png";
+      document.getElementById('email-copy-icon').src = "resources/images/icons/copy.svg";
     }, 2500);
   }
 
@@ -26,9 +26,9 @@ document.addEventListener('DOMContentLoaded', function() {
         console.error('Failed to copy text: ', err);
       });
 
-    document.getElementById('dc-copy-icon').src = "resources/images/icons/check.png";
+    document.getElementById('dc-copy-icon').src = "resources/images/icons/check.svg";
     setTimeout(function() {
-      document.getElementById('dc-copy-icon').src = "resources/images/icons/copy.png";
+      document.getElementById('dc-copy-icon').src = "resources/images/icons/copy.svg";
     }, 2500);
   }
 
@@ -41,6 +41,6 @@ document.addEventListener('DOMContentLoaded', function() {
   });
 
   // Adding the "img-inverter" class to the elements
-  document.getElementById('email-copy-icon').classList.add('img-inverter');
-  document.getElementById('dc-copy-icon').classList.add('img-inverter');
+    document.getElementById('email-copy-icon').classList.add('img-inverter');
+    document.getElementById('dc-copy-icon').classList.add('img-inverter');
 });
