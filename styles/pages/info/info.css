@@ -54,6 +54,12 @@
     vertical-align: -12px;
 }
 
+.github-icon{
+    width: 40px;
+    height: 40px;
+    vertical-align: -5px;
+}
+
 
 @media (prefers-color-scheme: light) {
     #info-page-wrapper{
