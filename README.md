@@ -2,7 +2,7 @@
 
 Repository for the webpage theblack.cat  
 
-## Wait, the [GitHub Pages](https://theblackcat-oc.github.io/theblack.cat/) has NSFW!?!? monkaTOS
+## Wait, the [GitHub Pages](https://theblackcat-oc.github.io/v2-theblack.cat/) has NSFW!?!? monkaTOS
 
 The NSFW content is not hosted on GitHub so... PepeLa
 
