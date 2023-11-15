@@ -13,7 +13,7 @@
     transform: scale(1.03);
     z-index: 1;
 }
-
+/*
 @media (prefers-color-scheme: light) {
     .card-wrapper {
         border: 2px solid black;
@@ -31,7 +31,7 @@
         border-color: rgb(24, 124, 255);
     }
 }
-
+*/
 @media (max-width: 436px) {
     .card-title{
         margin-left: 5%;
