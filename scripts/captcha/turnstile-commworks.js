@@ -1,5 +1,5 @@
 const turnstileConfig = {
-  sitekey: '0x4AAAAAAANL6mXeSnrnKbZW',
+  sitekey: '0x4AAAAAAANHiIn8pG5nQ_UC',
   callback: function(token) {
     console.log(`Challenge Success ${token}`);
     hideCaptchaAndShowContent();
@@ -32,5 +32,5 @@ if (window.matchMedia) {
 
 function hideCaptchaAndShowContent() {
   document.querySelector(".hiddenby-turnstile").style.display = "";
-  document.querySelector(".turnstile-widget").style.display = "none";
+  document.querySelector(".turnstile-widget-wrapper").style.display = "none";
 }
