@@ -23,6 +23,19 @@
 <meta name="twitter:description" content="Linkhub for &quot;the Black Cat&quot; Original Character content, where you can find galleries, terms of use, contact methods and the FFXIV© mods WCIF.">
 <meta name="twitter:image" content="https://theblack.cat/resources/images/bg-images/richlinks/ayaben-oct2023-fullcolor.jpg">
 <!--  ~~~~  -->
+<meta name="x:card" content="Commissioned Works Gallery: &quot;the Black Cat&quot;">
+<meta name="x:site" content="@di_theblackcat">
+<meta name="x:title" content="Linkhub: &quot;the Black Cat&quot;">
+<meta name="x:description" content="Gallery Commissioned Works of &quot;the Black Cat&quot; Original Character, where you can find all the commissioned art and gpose shots.">
+<meta name="x:image" content="https://theblack.cat/resources/images/bg-images/richlinks/ayaben-oct2023-fullcolor.jpg">
+<!--  ~~~~  -->
+<!-- ~~~~ Asyncronous Javascript ~~~~ -->
+<script async defer>
+    function clearQueryString() {
+        var urlWithoutQueryString = window.location.origin + window.location.pathname;
+        window.history.replaceState({}, document.title, urlWithoutQueryString);
+    }
+</script>
 <!-- ~~~~ Root CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/root/root.css">
 <link rel="stylesheet" type="text/css" href="styles/root/loading-animations.css">
@@ -36,8 +49,8 @@
 <link rel="stylesheet" type="text/css" href="styles/header/header-positions.css">
 <link rel="stylesheet" type="text/css" href="styles/header/header-text.css">
 <!--  ~~~~  -->
-<link rel="stylesheet" type="text/css" href="styles/pages/contact/contact.css">
-<link rel="stylesheet" type="text/css" href="styles/pages/info/info.css">
+<link rel="stylesheet" type="text/css" href="styles/body/pages/contact/contact.css">
+<link rel="stylesheet" type="text/css" href="styles/body/pages/info/info.css">
 <!-- ~~~~ Body CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/body-wrapper.css">
 <link rel="stylesheet" type="text/css" href="styles/body/card-wrapper.css">
@@ -53,8 +66,8 @@
 <!--  ~~~~  -->
 <link rel="stylesheet" type="text/css" href="styles/footer/footer-display.css">
 <!--  ~~~~ Pages CSS ~~~~ -->
-<link rel="stylesheet" type="text/css" href="styles/pages/tou/tou-page.css">
-<link rel="stylesheet" type="text/css" href="styles/pages/wcif/wcif-page.css">
+<link rel="stylesheet" type="text/css" href="styles/body/pages/tou/tou-page.css">
+<link rel="stylesheet" type="text/css" href="styles/body/pages/wcif/wcif-page.css">
 <!--  ~~~~ Title ~~~~ -->
 <title>Linkhub: &quot;the Black Cat&quot;</title>
 </head>
@@ -63,7 +76,7 @@
 <!--  ~~~~ Header ~~~~ -->
 <header id="header">
 <div id="header-wrapper">
-    <div id="header-title" class="user-select-none">
+    <div id="header-title" class="user-select-none" onclick="clearQueryString()">
         <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text">&quot;the Black Cat&quot;</span>
     </div>
     <div id="header-buttons-wrapper">
@@ -79,7 +92,7 @@
 </div>
 <!--  ~~~~ Contact ~~~~ -->
 <div class="contact-page-wrapper" id="contact-page-wrapper" style="display: none;">
-    <div class="textalign-center text-black cursor-pointer" onclick="document.getElementById('contact-page-wrapper').style.display = 'none';">
+    <div class="textalign-center text-black cursor-pointer" onclick="document.getElementById('contact-page-wrapper').style.display = 'none';clearQueryString();">
         <br>
         <span class="sanfrancisco-bold" id="info-click-mobile">👆🏿 Tap</span>
         <span class="sanfrancisco-bold" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span>
@@ -139,8 +152,8 @@
     </div>
 </div>
 <!--  ~~~~ Info ~~~~ -->
-<div id="info-page-wrapper" class="text-black" style="display: none;"onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
-    <div id="info-card-wrapper" class="loading-animation" onclick="document.getElementById('info-page-wrapper').style.display = 'none';">
+<div id="info-page-wrapper" class="text-black" style="display: none;"onclick="document.getElementById('info-page-wrapper').style.display = 'none';clearQueryString()">
+    <div id="info-card-wrapper" class="loading-animation" onclick="document.getElementById('info-page-wrapper').style.display = 'none';clearQueryString()">
         <span class="sanfrancisco-bold two-em">Hello and Welcome! 👋🏿</span>
         <br>
         <span class="sanfrancisco-rounded onepointfive-em">In this website you can find 🔍:</span>
@@ -166,7 +179,7 @@
             </li>
             <br>
             <li>
-                <a href="https://theblack.cat/?link=tou">
+                <a href="?link=tou">
                     <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
                         <img src="resources/images/icons/contract.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
                     </div>
@@ -175,7 +188,7 @@
             </li>
             <br>
             <li>
-                <a href="https://theblack.cat/?link=wcif">
+                <a href="?link=wcif">
                     <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
                         <img src="resources/images/icons/cube.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
                     </div>
@@ -184,7 +197,7 @@
             </li>
             <br>
             <li>
-                <a href="https://theblack.cat/?link=contact">
+                <a href="?link=contact">
                     <div class="glassbox-10 border-radius-8px display-inlineblock padding-fivepx">
                         <img src="resources/images/icons/contact.svg" class="img-inverter info-icon" alt="Thank you SVGRepo.com!">
                     </div>
@@ -260,14 +273,14 @@
         <div class="card-title">
             <h2 class="sanfrancisco-bold text-black">Original Character</h2>
         </div>
-            <a href="#">
+            <a href="?link=tou">
                 <div class="card-wrapper" id="tou-card">
                     <div class="glassbox-25">
                         <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">Terms of Use</h2>
                     </div>
                 </div>
             </a>
-            <a href="#">
+            <a href="?link=wcif">
                 <div class="card-wrapper margin-top-2vh margin-bottom-5vh" id="wcif-card">
                     <div class="glassbox-25">
                         <h2 class="sanfrancisco-rounded text-black margin-left-1vw card-text">FFXIV&copy; WCIF</h2>
@@ -340,7 +353,7 @@
         <span class="sanfrancisco-regular one-em">By using the Character, User acknowledges that they have read, understood, and agree to be bound by the terms of this Agreement.</span>
         <br><br>
 </div>
-<div id="tou-revert" class="glassbox-50" style="display: none;">
+<div id="tou-revert" class="glassbox-50" style="display: none;" onclick="clearQueryString()">
     <img src="resources/images/icons/back.svg" id="tou-revert-icon" class="img-inverter">
     &nbsp;
     <span class="sanfrancisco-bold text-black one-em">Back</span>
@@ -424,7 +437,7 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
     </div>
 <br><br>
 </div>
-<div id="wcif-revert" class="glassbox-50" style="display: none;">
+<div id="wcif-revert" class="glassbox-50" style="display: none;" onclick="clearQueryString()">
     <img src="resources/images/icons/back.svg" id="wcif-revert-icon" class="img-inverter">
     &nbsp;
     <span class="sanfrancisco-bold text-black one-em">Back</span>
@@ -447,9 +460,9 @@ H4sIAAAAAAAACs2YTW/bIBiAD/sjE9c5EeCPxNy6dMet0xZNWy+I2KShdrCG7S5Vlf8+MCTNpDbrJeBc
 <script src="scripts/goToTop/goToTop.js"></script>
 <script src="scripts/root/link-parser.js"></script>
 <!--  ~~~~  -->
-<script src="styles/pages/contact/contact-show.js"></script>
-<script src="styles/pages/info/info-show.js"></script>
-<script src="styles/pages/info/info-hide.js"></script>
+<script src="styles/body/pages/contact/contact-show.js"></script>
+<script src="styles/body/pages/info/info-show.js"></script>
+<script src="styles/body/pages/info/info-hide.js"></script>
 <!--  ~~~~  -->
 <script src="styles/body/gallery-cards/bodyref-card-bg.js"></script>
 <script src="styles/body/gallery-cards/commworks-bg.js"></script>

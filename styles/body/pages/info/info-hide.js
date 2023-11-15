@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.addEventListener('keydown', function (event) {
         if (event.key === 'Escape') {
             hideInfoPage();
+            clearQueryString()
         }
     });
     infoPageWrapper.addEventListener('click', hideInfoPage);
