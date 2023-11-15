@@ -6,43 +6,31 @@ const turnstileConfig = {
   },
 };
 
-const turnstileRender = function(theme) {
-  turnstile.render('#turnstile-widget', {
-    ...turnstileConfig,
-    theme: theme,
-  });
-};
+if (window.matchMedia) {
+  const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
+  console.log(prefersDarkMode);
 
-const hideCaptchaAndShowContent = function() {
-  const hiddenElement = document.querySelector(".hiddenby-turnstile");
-  const widgetElement = document.querySelector(".turnstile-widget");
+  const theme = prefersDarkMode ? 'dark' : 'light';
 
-  if (hiddenElement && widgetElement) {
-    hiddenElement.style.display = "";
-    widgetElement.style.display = "none";
-  }
-};
-
-const onLoadTurnstileCallback = function() {
-  if (window.matchMedia) {
-    const prefersDarkMode = window.matchMedia('(prefers-color-scheme: dark)').matches;
-    const theme = prefersDarkMode ? 'dark' : 'light';
-    console.log(theme);
-
-    turnstileRender(theme);
-  } else {
-    console.log('matchMedia not supported, unable to determine dark mode.');
-    turnstileRender('dark');
-  }
-};
-
-// Debounce window resize event if needed
-const debounce = (func, delay) => {
-  let timer;
-  return function () {
-    clearTimeout(timer);
-    timer = setTimeout(func, delay);
+  window.onloadTurnstileCallback = function() {
+    turnstile.render('#turnstile-widget', {
+      ...turnstileConfig,
+      theme: theme,
+    });
   };
-};
 
-window.onloadTurnstileCallback = onLoadTurnstileCallback;
+} else {
+  console.log('matchMedia not supported, unable to determine dark mode.');
+
+  window.onloadTurnstileCallback = function() {
+    turnstile.render('#turnstile-widget', {
+      ...turnstileConfig,
+      theme: 'dark',
+    });
+  };
+}
+
+function hideCaptchaAndShowContent() {
+  document.querySelector(".hiddenby-turnstile").style.display = "";
+  document.querySelector(".turnstile-widget").style.display = "none";
+}
