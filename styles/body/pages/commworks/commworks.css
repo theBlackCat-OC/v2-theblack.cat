@@ -67,7 +67,7 @@
         box-sizing: border-box;
         text-align: left;
         line-height: 1.6;
-        font-family: 'productsans-regular', sans-serif;
+        font-family: 'sanfrancisco-bold', sans-serif;
       }      
   }
 
@@ -99,7 +99,7 @@
     padding: 5px 10px;
     border-radius: 5px;
     cursor: pointer;
-    font-family: 'productsans-regular';
+    font-family: 'sanfrancisco-bold';
 }
 
 .tag-selected {
@@ -184,7 +184,7 @@
     border: 1px solid rgba(0, 0, 0, 0.3);
     padding: 8px;
     border-radius: 8px;
-    font-family: 'productsans-regular';
+    font-family: 'sanfrancisco-bold';
     font-size: 1.3em;
 }
 
@@ -210,7 +210,7 @@
 }
 
 .image-info a{
-    font-family: 'sanfrancisco';
+    font-family: 'sanfrancisco-rounded';
 }
 
 
@@ -228,7 +228,7 @@
     margin-right: 8px;
     cursor: pointer;
     transition: background-color 0.2s ease;
-    font-family: 'productsans-regular';
+    font-family: 'sanfrancisco-bold';
 }
 
 .tag.tag-selected {
