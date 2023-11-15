@@ -1,5 +1,5 @@
 const turnstileConfig = {
-  sitekey: '0x4AAAAAAANHiIn8pG5nQ_UC',
+  sitekey: '0x4AAAAAAANL6mXeSnrnKbZW',
   callback: function(token) {
     console.log(`Challenge Success ${token}`);
     hideCaptchaAndShowContent();
