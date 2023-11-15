@@ -21,7 +21,7 @@
     box-sizing: border-box;
     text-align: left;
     line-height: 1.6;
-    font-family: 'productsans-light', sans-serif;
+    font-family: 'sanfrancisco-rounded';
     border-radius: 13px;
 
 }
@@ -279,7 +279,7 @@
     -webkit-backdrop-filter: blur(3.1px);
     z-index: 4;
     border-radius: 15px;
-    font-family: 'productsanslight', 'sans-serif';
+    font-family: 'sanfrancisco-regular';
     border: 1px solid black;
   }
   
@@ -372,7 +372,7 @@
   padding: 10px;
   z-index: 4;
   border-radius: 15px;
-  font-family: 'productsanslight', 'sans-serif';
+  font-family: 'sanfrancisco-regular', 'sans-serif';
   border: 1px solid rgb(255, 255, 255);
   user-select: none;
 }
