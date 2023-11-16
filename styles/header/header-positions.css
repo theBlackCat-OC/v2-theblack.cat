@@ -1,22 +1,39 @@
 header {
     position: fixed;
     top: 0;
-    width: 100vw;
+    width: 100%;
     z-index: 1;
     height: 100px;
 }
 
-@media (max-width: 436px) {
+#header-wrapper{
+    margin-top: 3%;
+    margin-left: 8%;
+}
+
+@media (max-width: 521px) {
     header{
         height: 50px;
+    }
+    #header-logo{
+        height: 2.2rem;
+        width: 2.46rem;
+    }
+    #header-wrapper{
+        margin-left: 2%;
     }
 }
 
 #header-title {
-    position: absolute;
-    left: 10px;
     top: 50%;
     transform: translateY(-50%);
+}
+
+
+@media (max-width: 521px) {
+    #header-title {
+        margin-top: 24px;
+    }
 }
 
 #header-buttons-wrapper {
@@ -25,6 +42,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
 }
+
 @media (min-width: 521px) {
     #header-buttons-wrapper {
         right: 100px;
@@ -35,4 +53,29 @@ header {
 #header-info{
     display: inline-block;
     margin-left: 5px;
+}
+
+#header-logo{
+    top: 0;
+    left: 0;
+    height: 70px;
+    width: 78.40px;
+}
+
+@media (max-width: 521px) {
+    #header-logo{
+        height: 30px;
+        width: 33.6px;
+        vertical-align: -4px;
+    } 
+}
+
+#header-logo-wrapper{
+    vertical-align: -26px;
+}
+
+@media (max-width: 521px) {
+    #header-logo-wrapper{
+        vertical-align: -4px;
+    }
 }

@@ -12,8 +12,22 @@
     #header-title-text{
         font-size: 1.618rem;
     }
+    #header-title-text-mobile{
+        font-size: 1.618rem;
+    }
 }
 
 .header-title-text-hover{
     color:rgb(24, 124, 255);
+}
+
+@media (min-width: 436px) {
+    #header-title-text-mobile{
+        display: none;
+    }
+}
+@media (max-width: 436px) {
+    #header-title-text{
+        display: none;
+    }
 }
