@@ -1,6 +1,6 @@
 .card-wrapper {
     display: inline-block;
-    width: 39%;
+    width: 40%;
     height: 25vh;
     border-radius: 13px;
     box-sizing: border-box;
@@ -13,32 +13,14 @@
     transform: scale(1.03);
     z-index: 1;
 }
-/*
-@media (prefers-color-scheme: light) {
-    .card-wrapper {
-        border: 2px solid black;
-    }
-    .card-wrapper:hover {
-        border-color: rgb(24, 124, 255);
-    }
-}
 
-@media (prefers-color-scheme: dark) {
-    .card-wrapper {
-        border: 2px solid white;
-    }
-    .card-wrapper:hover {
-        border-color: rgb(24, 124, 255);
-    }
-}
-*/
-@media (max-width: 436px) {
+@media (max-width: 521px) {
     .card-title{
         margin-left: 5%;
     }
 }
 
-@media (max-width: 436px) {
+@media (max-width: 521px) {
     .card-wrapper{
         display: flex-start;
         flex-direction: column;
