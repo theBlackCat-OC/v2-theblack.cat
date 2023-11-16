@@ -1,28 +1,11 @@
 footer{
-    position: fixed;
-    bottom: -50px;
+    position: absolute;
+    bottom: 0;
     left: 0;
     width: 100%;
-    height: auto;
-    transition: bottom 0.3s ease-in-out;
-    background: rgba(255, 255, 255, 0.1);
-    box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(4.9px);
-    -webkit-backdrop-filter: blur(4.9px);
-}
-
-#copyright-text, #sitemap-footer-link{
-    display: inline-block;
-}
-
-@media (min-width: 436px) {
-    #sitemap-footer-icon {
-        display: none;
-    }
-}
-
-@media (max-width: 436px) {
-    #sitemap-footer-link {
-        display: none;
-    }
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 20px;
+    display: none; /* Initially hide the footer */
 }
