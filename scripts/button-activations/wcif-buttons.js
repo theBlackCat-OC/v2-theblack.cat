@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var wcifPage = document.getElementById('wcif-page');
     var wcifBackButton = document.getElementById('wcif-revert');
     var headerTitleText = document.getElementById('header-title-text');
+    var headerTitleTextMobile = document.getElementById('header-title-text-mobile');
 
     function vibrate() {
         if ('vibrate' in navigator) {
@@ -36,6 +37,11 @@ document.addEventListener('DOMContentLoaded', function () {
 
     headerTitleText.addEventListener('click', function () {
         handleRevertAction();
+    });
+
+    headerTitleTextMobile.addEventListener('click', function () {
+        handleRevertAction();
+        vibrate(); // Add vibration effect
     });
 
     // Add event listener for the 'Esc' key

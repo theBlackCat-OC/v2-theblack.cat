@@ -8,6 +8,19 @@
     cursor: pointer;
 }
 
+.no-hover {
+    pointer-events: none;
+} 
+
+#header-title-text-mobile{
+    transition: color ease 0.3s;
+}
+
+#header-title-text-mobile:hover{
+    color:rgb(24, 124, 255);
+    cursor: pointer;
+}
+
 @media (max-width: 652px) {
     #header-title-text{
         font-size: 1.618rem;

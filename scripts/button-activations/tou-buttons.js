@@ -3,6 +3,7 @@ document.addEventListener('DOMContentLoaded', function () {
     var touPage = document.getElementById('tou-page');
     var touBackButton = document.getElementById('tou-revert');
     var headerTitleText = document.getElementById('header-title-text');
+    var headerTitleTextMobile = document.getElementById('header-title-text-mobile');
 
     function vibrate() {
         if ('vibrate' in navigator) {
@@ -38,6 +39,11 @@ document.addEventListener('DOMContentLoaded', function () {
     });
 
     headerTitleText.addEventListener('click', function () {
+        handleRevertAction();
+        vibrate(); // Add vibration effect
+    });
+
+    headerTitleTextMobile.addEventListener('click', function () {
         handleRevertAction();
         vibrate(); // Add vibration effect
     });
