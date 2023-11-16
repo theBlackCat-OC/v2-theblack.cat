@@ -1,19 +1,24 @@
 document.addEventListener('DOMContentLoaded', function() {
-    var footer = document.getElementById('footer');
-    var lastScrollY = window.scrollY;
-  
-    function updateFooterPosition() {
-      var scrollY = window.scrollY;
-  
-      if (scrollY > lastScrollY) {
-        footer.style.bottom = '-60px';
-      } else {
-        footer.style.bottom = '0';
-      }
-  
-      lastScrollY = scrollY;
+  var footer = document.getElementById('footer');
+  var footerWrapper = document.getElementById('footer-wrapper');
+  var windowHeight = window.innerHeight;
+
+  function checkFooterVisibility() {
+    var contentHeight = footerWrapper.offsetHeight;
+
+    if (contentHeight < windowHeight) {
+      footer.style.display = '';
+    } else {
+      footer.style.display = 'none';
     }
-    window.addEventListener('scroll', updateFooterPosition);
-    updateFooterPosition();
+  }
+
+  checkFooterVisibility();
+
+  window.addEventListener('resize', function() {
+    windowHeight = window.innerHeight;
+    checkFooterVisibility();
   });
+});
+
   

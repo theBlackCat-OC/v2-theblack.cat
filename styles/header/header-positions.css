@@ -25,7 +25,7 @@ header {
     top: 50%;
     transform: translateY(-50%);
 }
-@media (min-width: 436px) {
+@media (min-width: 521px) {
     #header-buttons-wrapper {
         right: 100px;
     }

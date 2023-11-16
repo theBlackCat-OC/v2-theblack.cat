@@ -8,7 +8,7 @@
     cursor: pointer;
 }
 
-@media (max-width: 436px) {
+@media (max-width: 652px) {
     #header-title-text{
         font-size: 1.618rem;
     }
