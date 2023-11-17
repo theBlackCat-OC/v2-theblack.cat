@@ -10,7 +10,7 @@
 } 
 
 .gallery-container {
-    margin-top: 6%;
+    margin-top: 10%;
     margin-left: 15%;
     margin-right: 15%;
     background: rgba(255, 255, 255, 0.25);
@@ -109,12 +109,12 @@
 
 
 .gallery {
-    margin-top: 2vh;
-    display: none;
-    flex-wrap: wrap;
-    gap: 16px;
-    justify-content: center; 
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  justify-content: center;
 }
+
 
 @media (max-width: 800px) {
   .tag-container{
@@ -186,6 +186,10 @@
     border-radius: 8px;
     font-family: 'sanfrancisco-bold';
     font-size: 1.3em;
+}
+
+.image-info span {
+  display: inline;
 }
 
 @media (prefers-color-scheme: light) {
