@@ -65,10 +65,9 @@
 <!--  ~~~~ Pages CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/pages/tou/tou-page.css">
 <link rel="stylesheet" type="text/css" href="styles/body/pages/wcif/wcif-page.css">
-<!--  ~~~~ Asynchronous JavaScript ~~~~ 
+<!--  ~~~~ Asynchronous JavaScript ~~~~ -->
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
 <script src="scripts/captcha/turnstile-commworks.js" async defer></script>
--->
 <!--  ~~~~  -->
 <!--  ~~~~ Title ~~~~ -->
 <title>Commissioned Works Gallery: &quot;the Black Cat&quot;</title>
@@ -261,7 +260,7 @@
 </header>
 <!-- ~~~~ Commissioned Works Gallery ~~~~ -->
 <!-- ~ Gallery Wrapper ~  -->
-<div class="gallery-container hiddenby-turnstile" >
+<div class="gallery-container hiddenby-turnstile" style="display: none;">
 <!-- ~ Gallery Tags ~ -->
     <div class="tag-container-parent">
         <div class="tag-container" id="tagContainer"></div>
@@ -278,7 +277,7 @@
     <img class="modal-content" id="zoomedImage">
 </div>
 <!-- ~ Turnstile Widget ~  -->
-<div class="turnstile-widget-wrapper glassbox-10"style="display: none;">
+<div class="turnstile-widget-wrapper glassbox-10">
     <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
     <br><br>
     <div id="turnstile-widget" class="turnstile-widget"></div>
