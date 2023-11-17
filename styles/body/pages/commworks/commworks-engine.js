@@ -115,17 +115,30 @@ function createVideoElement(videoSrc) {
 
 tags.forEach(tag => addTagToContainer(tag));
 
-document.querySelectorAll('.image-card img').forEach(img => {
-  img.addEventListener('click', function() {
+document.getElementById('gallery').addEventListener('click', function(event) {
+  if (event.target.tagName === 'IMG') {
     const modal = document.querySelector('.modal');
     const modalImg = document.querySelector('.modal img');
-    if(modal && modalImg) {
+    const modalDismiss = document.getElementById('modal-dismiss');
+
+    if (modal && modalImg && modalDismiss) {
+      modalImg.src = event.target.src;
+      modalDismiss.style.display = 'block';
       modal.style.display = 'block';
-      modalImg.src = this.src;
     }
-  });
+  }
 });
 
 document.querySelector('.modal').addEventListener('click', function() {
   this.style.display = 'none';
 });
+
+document.addEventListener('keydown', function(event) {
+  const modal = document.querySelector('.modal');
+  if (event.key === 'Escape' && modal.style.display === 'block') {
+    modal.style.display = 'none';
+  }
+});
+
+
+

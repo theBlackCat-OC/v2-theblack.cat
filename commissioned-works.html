@@ -64,6 +64,9 @@
 <!--  ~~~~ Pages CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/pages/tou/tou-page.css">
 <link rel="stylesheet" type="text/css" href="styles/body/pages/wcif/wcif-page.css">
+<!--  ~~~~ Asynchronous JavaScript ~~~~ -->
+<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+<!--  ~~~~  -->
 <!--  ~~~~ Title ~~~~ -->
 <title>Commissioned Works Gallery: &quot;the Black Cat&quot;</title>
 </head>
@@ -248,19 +251,22 @@
 </div>
 </header>
 <!-- ~~~~ Commissioned Works Gallery ~~~~ -->
-<!-- ~ Gallery Painting ~  -->
-<div class="gallery-container margin-top-10vh hiddenby-turnstile" style="display: none;">
-<!-- ~~~~ Gallery ~~~~ -->
+<!-- ~ Gallery Wrapper ~  -->
+<div class="gallery-container hiddenby-turnstile" style="display: none;">
+<!-- ~ Gallery Tags ~ -->
     <div class="tag-container-parent">
-                <div class="tag-container" id="tagContainer"></div>
+        <div class="tag-container" id="tagContainer"></div>
     </div>
-    <div class="gallery" id="gallery">
-    </div>  
+    <div class="gallery" id="gallery"></div>  
 </div>
-    <div id="imageModal" class="modal">
-        <span class="close">&times;</span>
+    <div id="imageModal" class="modal cursor-pointer loading-animation">
+        <div class="textalign-center" id="modal-dismiss" style="display: none;">
+            <span class="sanfrancisco-bold" id="modal-dismiss-mobile">👆🏿 Tap anywhere to dismiss</span>
+            <span class="sanfrancisco-bold" id="modal-dismiss-desktop">Press <kbd>Esc</kbd> or click anywhere to dismiss</span>
+        </div>
+        <br>    
         <img class="modal-content" id="zoomedImage">
-</div>
+    </div>
 <!-- ~ Turnstile Widget ~  -->
 <div class="turnstile-widget-wrapper glassbox-10">
     <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
@@ -268,10 +274,11 @@
     <div id="turnstile-widget" class="turnstile-widget"></div>
     <br>
 </div>
+<!-- ~ Gallery End ~ -->
 <!--  ~~~~ Home Icon ~~~~ -->
 <a href="https://theblack.cat">
     <div id="home-button" class="glassbox-10">
-        <img src="resources/images/icons/back.svg" id="home-icon" class="img-inverter" alt="    ">
+        <img src="resources/images/icons/back.svg" id="home-icon" class="img-inverter" alt="Back to home!">
     </div>
 </a>
 <!--  ~~~~ Go to Top Button ~~~~ -->
@@ -283,7 +290,6 @@
 <!--  ~~~~ Footer ~~~~ -->
 <!--  ~~~~ Scripts ~~~~  -->
 <!--  ~~~~  -->
-<script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
 <script src="scripts/captcha/turnstile-commworks.js"></script>
 <!--  ~~~~  -->
 <script src="styles/body/pages/commworks/commworks-engine.js"></script>
