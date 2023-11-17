@@ -7,7 +7,6 @@ header {
 }
 
 #header-wrapper{
-    margin-top: 3%;
     margin-left: 8%;
 }
 
@@ -25,14 +24,18 @@ header {
 }
 
 #header-title {
-    top: 50%;
-    transform: translateY(-50%);
+    position: absolute;
+    top: 25%; 
 }
-
+@media (max-width: 1428px) {
+    #header-title {
+        top: 40%; 
+    }
+}
 
 @media (max-width: 521px) {
     #header-title {
-        margin-top: 24px;
+        top: 20%;
     }
 }
 
@@ -56,26 +59,43 @@ header {
 }
 
 #header-logo{
-    top: 0;
-    left: 0;
+    position: absolute;
+    top: 10%;
+    left: 2%;
     height: 70px;
     width: 78.40px;
 }
 
+#header-logo{
+    top: 10%;
+    left: 8%;
+}
+
+@media (max-width: 1406px) {
+    #header-logo{
+        top: 10%;
+        left: 8%;
+    }
+}
+
+@media (max-width: 1206px) {
+    #header-logo{
+        top: 10%;
+        left: 6%;
+    }
+}
+
+@media (max-width: 700px) {
+    #header-logo{
+        top: 10%;
+        left: 2%;
+    }
+}
 @media (max-width: 521px) {
     #header-logo{
+        top: 10%;
+        left: 2%;
         height: 30px;
         width: 33.6px;
-        vertical-align: -4px;
     } 
-}
-
-#header-logo-wrapper{
-    vertical-align: -26px;
-}
-
-@media (max-width: 521px) {
-    #header-logo-wrapper{
-        vertical-align: -4px;
-    }
 }
