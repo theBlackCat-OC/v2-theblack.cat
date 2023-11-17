@@ -16,61 +16,63 @@ document.addEventListener('DOMContentLoaded', function() {
   ];
 
   // Fetch the JSON file and store the data in imageDataStore
-  fetch('styles/body/pages/commworks/parsed-commworks-gallery.json')
+  fetch('styles/body/pages/commworks/commworks-gallery.json')
     .then(response => response.json())
     .then(data => {
       imageDataStore.push(...data); // Store the fetched data
-      data.forEach(image => {
-        addImageToGallery(image); // Add each image to the gallery
-      });
-      updateGallery(); // Update the gallery after images are added
+      createTags(); // Create tags and add event listeners
+      console.log('Image data loaded:', imageDataStore); // Check the structure of the loaded data
     })
     .catch(error => {
       console.error('Error fetching image data:', error);
     });
 
-// Function to add an image or video to the gallery based on file type
-function addImageToGallery(image) {
-  const gallery = document.getElementById('gallery');
-  const mediaCard = document.createElement('div');
-  mediaCard.classList.add('image-card'); // Ensure this matches the CSS class name
 
-  let mediaElement;
-  const fileExtension = image.src.split('.').pop().toLowerCase();
+  // Function to add an image or video to the gallery based on file type
+  function addImageToGallery(image) {
+    console.log('Loading image:', image.src); // Log when an image is about to load
+    const gallery = document.getElementById('gallery');
+    const mediaCard = document.createElement('div');
+    mediaCard.classList.add('image-card');
 
-  if (fileExtension === 'mp4') {
-    mediaElement = document.createElement('video');
-    mediaElement.controls = true;
-    mediaElement.classList.add('gallery-item'); // Ensure this matches the CSS class name
-    const sourceElement = document.createElement('source');
-    sourceElement.src = image.src;
-    sourceElement.type = 'video/mp4';
-    mediaElement.appendChild(sourceElement);
-  } else {
-    mediaElement = document.createElement('img');
-    mediaElement.classList.add('gallery-item'); // Ensure this matches the CSS class name
-    mediaElement.src = image.src;
-    mediaElement.alt = 'Gallery image';
+    let mediaElement;
+    const fileExtension = image.src.split('.').pop().toLowerCase();
+
+    if (fileExtension === 'mp4') {
+      mediaElement = document.createElement('video');
+      mediaElement.controls = true;
+      mediaElement.classList.add('gallery-item');
+      const sourceElement = document.createElement('source');
+      sourceElement.src = image.src;
+      sourceElement.type = 'video/mp4';
+      mediaElement.appendChild(sourceElement);
+    } else {
+      mediaElement = document.createElement('img');
+      mediaElement.classList.add('gallery-item');
+      mediaElement.src = image.src;
+      mediaElement.alt = 'Gallery image';
+    }
+
+    mediaCard.appendChild(mediaElement);
+
+    const mediaInfo = document.createElement('div');
+    mediaInfo.classList.add('image-info');
+    mediaInfo.innerHTML = image.description;
+
+    mediaCard.appendChild(mediaInfo);
+    gallery.appendChild(mediaCard);
   }
-
-  mediaCard.appendChild(mediaElement);
-
-  const mediaInfo = document.createElement('div');
-  mediaInfo.classList.add('image-info');
-  mediaInfo.innerHTML = image.description; // Use innerHTML to render the HTML content
-
-  mediaCard.appendChild(mediaInfo);
-  gallery.appendChild(mediaCard);
-}
 
   // Function to create tags and append them to the tag container
   function createTags() {
+    console.log('Creating tags...'); // Check if tags are being created
     const tagContainer = document.getElementById('tagContainer');
     if (!tagContainer) {
       console.error('Tag container not found');
       return;
     }
 
+    // Assuming 'tags' array is defined elsewhere in your code as provided in your previous message
     tags.forEach(tag => {
       const tagElement = document.createElement('div');
       tagElement.classList.add('tag');
@@ -85,38 +87,23 @@ function addImageToGallery(image) {
         });
         // Select the clicked tag
         this.classList.add('tag-selected');
-        updateGallery();
+        loadImagesForTag(tagElement.dataset.tag);
       });
 
       tagContainer.appendChild(tagElement);
     });
   }
 
-  // Function to update the gallery based on the selected tags
-  function updateGallery() {
-    const gallery = document.getElementById('gallery');
-    const selectedTags = Array.from(document.querySelectorAll('.tag-selected')).map(tag => tag.dataset.tag);
-
-    gallery.innerHTML = ''; // Clear the gallery
-
-    if (selectedTags.length === 0) {
-      gallery.style.display = 'none';
-    } else {
-      gallery.style.display = 'flex';
-
-      imageDataStore.forEach(imageData => {
-        const imageTags = imageData.tags.split(' ');
-        const hasAllSelectedTags = selectedTags.every(selectedTag => imageTags.map(tag => tag.toLowerCase()).includes(selectedTag));
-
-        if (hasAllSelectedTags) {
-          addImageToGallery(imageData);
-        }
-      });
-    }
+  // Function to load images for a specific tag
+  function loadImagesForTag(tag) {
+    console.log('Loading images for tag:', tag); // Check if this function is called
+    // Clear the gallery
+    document.getElementById('gallery').innerHTML = '';
+  
+    // Filter imageDataStore for images with the selected tag and add them to the gallery
+    imageDataStore.filter(image => image.tags.toLowerCase().split(' ').includes(tag.toLowerCase()))
+      .forEach(image => addImageToGallery(image));
   }
-
-  // Create tags and append them to the tag container
-  createTags();
 
   document.getElementById('gallery').addEventListener('click', function(event) {
     if (event.target.tagName === 'IMG') {

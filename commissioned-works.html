@@ -5,6 +5,7 @@
 <meta charset="utf-8">
 <meta name="color-scheme" content="light, dark">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<link rel="icon" href="resources/images/icons/Earring.ico" type="image/x-icon">
 <!--  Rich Links  -->
 <meta name="description" content="Gallery Commissioned Works of &quot;the Black Cat&quot; Original Character, where you can find all the commissioned art and gpose shots.">
 <meta name="keywords" content="original character, wcif, the black cat original character, tbc oc, commissioned works, comms, commworks">
@@ -79,7 +80,7 @@
 <div id="header-wrapper">
     <div id="header-title" class="user-select-none" title="Back to home">
         <div class="display-inlineblock" id="header-logo-wrapper">
-            <img src="resources/images/icons/Earring.avif" id="header-logo">
+            <img src="resources/images/icons/Earring.avif" id="header-logo" alt="Wing Earring Logo">
         </div>
         <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text">&quot;the Black Cat&quot; - Commissioned Works</span>
         <span class="sanfrancisco-bold text-black margin-left-3vw" id="header-title-text-mobile">Comm. Works</span>
@@ -246,7 +247,13 @@
             </ul>
         </span>
         <br><br>
-        <span class="sanfrancisco-bold">Thank you for reading and have a good time! 💖</span><br>
+        <div class="textalign-center">
+            <span class="sanfrancisco-bold">
+                Thank you for reading and have a good time! 💖
+            </span><br><br>
+            <img src="resources/images/icons/Earring.avif" id="info-earring">
+        </div>
+        <br>
         <div class="textalign-right"><span class="sanfrancisco-light" id="info-click-mobile">👆🏿 Tap</span><span class="sanfrancisco-light" id="info-click-desktop">Press <kbd>Esc</kbd> or click</span><span class="sanfrancisco-light"> anywhere to dismiss.</span></div>
         <br>
     </div>
@@ -262,14 +269,14 @@
     <br>
     <div class="gallery" id="gallery"></div>  
 </div>
-    <div id="imageModal" class="modal cursor-pointer loading-animation">
-        <div class="textalign-center" id="modal-dismiss" style="display: none;">
-            <span class="sanfrancisco-bold" id="modal-dismiss-mobile">👆🏿 Tap anywhere to dismiss</span>
-            <span class="sanfrancisco-bold" id="modal-dismiss-desktop">Press <kbd>Esc</kbd> or click anywhere to dismiss</span>
-        </div>
-        <br>    
-        <img class="modal-content" id="zoomedImage">
+<div id="imageModal" class="modal cursor-pointer loading-animation">
+    <div class="textalign-center" id="modal-dismiss" style="display: none;">
+        <span class="sanfrancisco-bold" id="modal-dismiss-mobile">👆🏿 Tap anywhere to dismiss</span>
+        <span class="sanfrancisco-bold" id="modal-dismiss-desktop">Press <kbd>Esc</kbd> or click anywhere to dismiss</span>
     </div>
+    <br>    
+    <img class="modal-content" id="zoomedImage">
+</div>
 <!-- ~ Turnstile Widget ~  -->
 <div class="turnstile-widget-wrapper glassbox-10"style="display: none;">
     <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
