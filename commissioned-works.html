@@ -64,8 +64,10 @@
 <!--  ~~~~ Pages CSS ~~~~ -->
 <link rel="stylesheet" type="text/css" href="styles/body/pages/tou/tou-page.css">
 <link rel="stylesheet" type="text/css" href="styles/body/pages/wcif/wcif-page.css">
-<!--  ~~~~ Asynchronous JavaScript ~~~~ -->
+<!--  ~~~~ Asynchronous JavaScript ~~~~ 
 <script src="https://challenges.cloudflare.com/turnstile/v0/api.js?onload=onloadTurnstileCallback" async defer></script>
+<script src="scripts/captcha/turnstile-commworks.js" async defer></script>
+-->
 <!--  ~~~~  -->
 <!--  ~~~~ Title ~~~~ -->
 <title>Commissioned Works Gallery: &quot;the Black Cat&quot;</title>
@@ -252,11 +254,12 @@
 </header>
 <!-- ~~~~ Commissioned Works Gallery ~~~~ -->
 <!-- ~ Gallery Wrapper ~  -->
-<div class="gallery-container hiddenby-turnstile" style="display: none;">
+<div class="gallery-container hiddenby-turnstile" >
 <!-- ~ Gallery Tags ~ -->
     <div class="tag-container-parent">
         <div class="tag-container" id="tagContainer"></div>
     </div>
+    <br>
     <div class="gallery" id="gallery"></div>  
 </div>
     <div id="imageModal" class="modal cursor-pointer loading-animation">
@@ -268,7 +271,7 @@
         <img class="modal-content" id="zoomedImage">
     </div>
 <!-- ~ Turnstile Widget ~  -->
-<div class="turnstile-widget-wrapper glassbox-10">
+<div class="turnstile-widget-wrapper glassbox-10"style="display: none;">
     <span class="onepointfive-em productsans-bold text-black">Verifying your browser, please hold...</span>
     <br><br>
     <div id="turnstile-widget" class="turnstile-widget"></div>
@@ -290,10 +293,7 @@
 <!--  ~~~~ Footer ~~~~ -->
 <!--  ~~~~ Scripts ~~~~  -->
 <!--  ~~~~  -->
-<script src="scripts/captcha/turnstile-commworks.js"></script>
-<!--  ~~~~  -->
-<script src="styles/body/pages/commworks/commworks-engine.js"></script>
-<script src="styles/body/pages/commworks/commworks-gallery.js"></script>
+<script src="styles/body/pages/commworks/new-commworks-engine.js"></script>
 <!--  ~~~~  -->
 <script src="styles/body/pages/contact/contact-show.js"></script>
 <script src="styles/body/pages/info/info-show.js"></script>
