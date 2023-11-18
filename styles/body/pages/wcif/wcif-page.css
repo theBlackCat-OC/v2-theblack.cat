@@ -37,6 +37,7 @@
 
 @media (max-width: 819px) {
     #wcif-page{
+        margin-top: 18%;
         padding: 3px;
         margin-bottom:4vh;
         width: 90%;
