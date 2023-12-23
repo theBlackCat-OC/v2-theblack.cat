@@ -117,6 +117,12 @@
     unicode-range: U+E020-E0DB;
   }
 
+  @font-face {
+    font-family: 'helvetica-regular';
+    src: url('../../resources/fonts/helvetica.ttf') format('truetype');
+    font-display:swap;
+  }
+
 
 /**/
 .cascadia{
@@ -202,6 +208,11 @@
 .brightness-inverted{
   font-family: 'brightness-inverted', sans-serif;
 }
+
+.helvetica-regular{
+  font-family: 'helvetica-regular', sans-serif;
+}
+
 
 /**/
 
